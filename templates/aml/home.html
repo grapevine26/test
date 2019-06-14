@@ -1,0 +1,188 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>home</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'aml/css/home.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+    <style>
+        .ten_body {
+            background-image: url('{% static 'aml/img/signin_bg.jpg' %}');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .ten_signin_icon_id {
+            background-image: url('{% static 'aml/img/signin_id.png' %}');
+        }
+
+        .ten_signin_icon_password {
+            background-image: url('{% static 'img/signin_password.png' %}');
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="ten_body">
+        <iframe src="{% static "aml/audio/1slide.mp3" %}" allow="autoplay" style="display:none" id="audio_aster01"></iframe>
+        <div class="signin_form_wrapper">
+            <div class="signin_form_title">
+                <h2><span class="ten_font_bold">ASTER</span> Risk Management</h2>
+            </div>
+            <div class="signin_form_content">
+                <form action="{% url 'aml:analysing' %}" class="form-ajax" method="post" name="login_form"> {% csrf_token %}
+                    <fieldset>
+                        <section>
+                            <label class="input">
+                                <i class="icon-append ten_signin_icon ten_signin_icon_id"></i>
+                                <input type="text" id="arm_user_code_number" placeholder="Facebook ID"
+                                       autocomplete="on" class="f_username" name="f_username">
+                                <b class="tooltip tooltip-bottom-right">Only numbers</b>
+                            </label>
+                        </section>
+                        <section>
+                            <label class="input">
+                                <i class="icon-append ten_signin_icon ten_signin_icon_password"></i>
+
+                                <input type="password" id="arm_user_password" placeholder="Facebook PW"
+                                       autocomplete="off" class="f_password" name="f_password">
+                                <b class="tooltip tooltip-bottom-right">Needed to verify your password</b>
+                            </label>
+                        </section>
+                    </fieldset>
+                    <fieldset>
+                        <section>
+                            <label class="input">
+                                <i class="icon-append ten_signin_icon ten_signin_icon_id"></i>
+                                <input type="text" id="arm_user_code_number" placeholder="Instagram ID"
+                                       autocomplete="on" class="i_username" name="i_username">
+                                <b class="tooltip tooltip-bottom-right">Only numbers</b>
+                            </label>
+                        </section>
+                        <section>
+                            <label class="input">
+                                <i class="icon-append ten_signin_icon ten_signin_icon_password"></i>
+                                <input type="password" id="arm_user_password" placeholder="Instagram PW"
+                                       autocomplete="off" class="i_password" name="i_password">
+                                <b class="tooltip tooltip-bottom-right">Needed to verify your password</b>
+                            </label>
+                        </section>
+                    </fieldset>
+
+                    <fieldset>
+                        <section>
+                            <label class="input">
+                                <i class="icon-append ten_signin_icon ten_signin_icon_id"></i>
+                                <input type="text" id="arm_user_code_number" placeholder="Google ID"
+                                       autocomplete="on" class="g_username" name="g_username">
+                                <b class="tooltip tooltip-bottom-right">Only numbers</b>
+                            </label>
+                        </section>
+                        <section>
+                            <label class="input">
+                                <i class="icon-append ten_signin_icon ten_signin_icon_password"></i>
+                                <input type="password" id="arm_user_password" placeholder="Google PW"
+                                       autocomplete="off" class="g_password" name="g_password">
+                                <b class="tooltip tooltip-bottom-right">Needed to verify your password</b>
+                            </label>
+                        </section>
+                    </fieldset>
+                    <fieldset>
+                        <section>
+                            <label class="input">
+                                <i class="icon-append ten_signin_icon ten_signin_icon_id"></i>
+                                <input type="text" id="arm_user_code_number" placeholder="Twitter ID"
+                                       autocomplete="on" class="t_username" name="t_username">
+                                <b class="tooltip tooltip-bottom-right">Only numbers</b>
+                            </label>
+                        </section>
+                        <section>
+                            <label class="input">
+                                <i class="icon-append ten_signin_icon ten_signin_icon_password"></i>
+                                <input type="password" id="arm_user_password" placeholder="Twitter PW"
+                                       autocomplete="off" class="t_password" name="t_password">
+                                <b class="tooltip tooltip-bottom-right">Needed to verify your password</b>
+                            </label>
+                        </section>
+                        <section>
+                            <label class="input">
+                                <i class="icon-append ten_signin_icon ten_signin_icon_password"></i>
+                                <input type="text" id="arm_user_code_number" placeholder="Twitter E-mail"
+                                       autocomplete="off" class="t_username" name="t_email">
+                                <b class="tooltip tooltip-bottom-right">Needed to verify your password</b>
+                            </label>
+                        </section>
+                        <section>
+                            <label class="input">
+                                <i class="icon-append ten_signin_icon ten_signin_icon_password"></i>
+                                <input type="text" id="arm_user_code_number" placeholder="Twitter Phone Number"
+                                       autocomplete="off" class="t_username" name="t_ph">
+                                <b class="tooltip tooltip-bottom-right">Needed to verify your password</b>
+                            </label>
+                        </section>
+                    </fieldset>
+                    <footer>
+                        <input type="button" id="signin_button" class="button login_btn" value="Sign in"  onclick="check();">
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+<script src="{% static 'aml/js/copyJs/js/jquery.js' %}"></script>
+<script src="{% static 'aml/js/copyJs/js/jquery.easing.1.3.js' %}"></script>
+<script>
+
+        function check(){
+             var f_user = $('.f_username').val();
+             var f_pass = $('.f_password').val();
+             var i_user = $('.i_username').val();
+             var i_pass = $('.i_password').val();
+             if (!(f_user === '') && !(i_user === '')){
+
+                if (f_pass === '') {
+                    alert('Facebook password should be inserted.');
+                    $('.f_password').focus();
+                } else if (i_pass === '') {
+                    alert('Instagram password should be inserted.');
+                    $('.i_password').focus();
+                } else {
+                    document.login_form.submit();
+                }
+
+             } else if ((f_user === '') && !(i_user === '')){
+
+                if (i_pass === '') {
+                    alert('Instagram password should be inserted.');
+                    $('.i_password').focus();
+                } else {
+                    document.login_form.submit();
+                }
+
+             } else if (!(f_user === '') && (i_user === '')){
+
+                if (f_pass === '') {
+                    alert('Facebook password should be inserted.');
+                    $('.f_password').focus();
+                } else {
+                    document.login_form.submit();
+                }
+
+             } else if ((f_user === '') && (i_user === '')) {
+                $('.f_username').focus();
+                alert('Facebook or Instagram account should be inserted.');
+
+             }
+
+        };
+</script>
+{% endblock %}

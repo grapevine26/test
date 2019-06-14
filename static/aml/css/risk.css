@@ -1,0 +1,133 @@
+.contents {
+    width: 100%;
+    display: table-row;
+}
+
+#wrapper > nav > .sidebar-collapse > ul > li:first-child {
+    height: 70px;
+    text-align: center;
+}
+
+.contentsDiv {
+    padding-bottom: 43px;
+    padding-top: 20px;
+    display: table;
+}
+
+/* 제목 */
+.intro {
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
+    line-height: 100px;
+}
+
+.intro h1 {
+    margin-bottom: 10px;
+}
+
+/* 피라미드 */
+.final_div {
+    display: inline-block;
+    width: 50%;
+    height: 630px;
+    min-width: 780px;
+    margin: 0;
+}
+
+.final_triangle {
+    position: relative;
+    height: 630px;
+    /*//730*/
+}
+
+.final_triangle div {
+    position: absolute;
+    top: 0;
+    line-height: 100px;
+    font-size: 1em;
+    text-align: center;
+    background: #4dd0e1;
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    transition: all ease 0.6s;
+    color: #4dd0e1;
+}
+
+.final_triangle .one {
+    z-index: 1;
+    line-height: 150px;
+}
+
+.final_triangle .two,
+.final_triangle .three,
+.final_triangle .four {
+    z-index: 2;
+    line-height: 150px;
+}
+
+.final_triangle .one {
+
+    clip-path: polygon(50% 0%, 40% 100%, 60% 100%);
+}
+
+.final_triangle .two {
+    clip-path: polygon(40% 0%, 60% 0%, 70% 100%, 30% 100%);
+}
+
+.final_triangle .three {
+    clip-path: polygon(30% 0%, 70% 0%, 80% 100%, 20% 100%)
+}
+
+.final_triangle .four {
+    clip-path: polygon(20% 0%, 80% 0%, 90% 100%, 10% 100%)
+}
+
+.final_triangle div {
+    color: white;
+}
+
+/* 테이블 */
+.table_div1 {
+    display: none;
+    float: right;
+    height: 100%;
+    width: 44%;
+    min-width: 700px;
+    margin-right: 80px;
+    table-layout: fixed;
+}
+
+.table {
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    margin: 0 0 10px 0;
+}
+
+.table th, td {
+    text-align: center;
+    width: 25%;
+    overflow: hidden;
+    word-wrap:break-word;
+}
+
+.table_name {
+    background: rgb(240, 98, 146);
+    color: white;
+}
+
+th:not(.table_name) {
+    color: rgb(240, 98, 146);
+}
+
+caption {
+    caption-side: top;
+    text-align: right;
+    padding: 0;
+}

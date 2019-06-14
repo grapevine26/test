@@ -1,0 +1,291 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}
+<title>analysing</title>
+{% endblock %}
+{% block css %}
+<style>
+
+        * {
+            font-family: 'Jeju Myeongjo', serif;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6em;
+        }
+
+        .processing_img_wrapper {
+            text-align: center;
+        }
+
+        .processing_logs {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 6rem;
+        }
+
+        ul, li {
+
+        }
+
+        .processing_logs > li {
+            list-style: none;
+            font-size: large;
+            line-height: 35px;
+        }
+
+        @media (min-width: 300px) {
+            .container {
+                width: 750px;
+            }
+
+            .processing_img_wrapper {
+                padding: 10px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+
+            .processing_img_wrapper {
+                padding: 40px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+
+            .processing_img_wrapper {
+                padding: 120px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+
+            .processing_img_wrapper {
+                padding: 140px;
+            }
+        }
+
+
+</style>
+{% endblock %}
+
+{% block content %}
+<body>
+<iframe src="{% static 'audio/3slide.mp3' %}" allow="autoplay" style="display:none" id="audio_aster01"></iframe>
+<div id="wrapper" class="home-page">
+    <section id="processing">
+        <div class="processing_img_wrapper">
+            <img src="{% static 'aml/img/evalgear_loading.gif' %}"/>
+            <h1 id="main_title">Analysing</h1>
+            <br/>
+            <br/>
+            <ul class="processing_logs">
+                <li>Analysing information.</li>
+            </ul>
+        </div>
+    </section>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<form style="display: none;" action="{% url 'aml:result' %}" method="post" id="form">{% csrf_token %}
+    <input type="hidden" name="f_username" class="f_username" value="{{ f_username }}">
+    <input type="hidden" name="f_password" class="f_password" value="{{ f_password }}">
+    <input type="hidden" name="i_username" class="i_username" value="{{ i_username }}">
+    <input type="hidden" name="i_password" class="i_password" value="{{ i_password }}">
+    <input type="hidden" name="g_username" class="g_username" value="{{ g_username }}">
+    <input type="hidden" name="g_password" class="g_password" value="{{ g_password }}">
+    <input type="hidden" name="t_username" class="t_username" value="{{ t_username }}">
+    <input type="hidden" name="t_password" class="t_password" value="{{ t_password }}">
+    <input type="hidden" name="t_ph" class="t_ph" value="{{ t_ph }}">
+    <input type="hidden" name="t_email" class="t_email" value="{{ t_email }}">
+</form>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'aml/js/copyJs/js/jquery.js' %}"></script>
+<script src="{% static 'aml/js/copyJs/js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'aml/js/copyJs/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'aml/js/copyJs/js/animate.js' %}"></script>
+<!-- Vendor Scripts -->
+<script>
+        $(document).ready(function () {
+            var sec = 0;
+            var timerId = setInterval(function () {
+                if (sec > 600) {
+                    clearInterval(timerId);
+                } else {
+                    var main_title_string = String($('#main_title').html());
+                    var count = (main_title_string.match(/\./g) || []).length;
+
+                    if (count < 4) {
+                        $('#main_title').append('.');
+                    } else {
+                        $('#main_title').html('Analysing');
+                    }
+                    sec++;
+                }
+            }, 200);
+
+            f_username = $('.f_username').val();
+            f_password = $('.f_password').val();
+            i_username = $('.i_username').val();
+            i_password = $('.i_password').val();
+            g_username = $('.g_username').val();
+            g_password = $('.g_password').val();
+            t_username = $('.t_username').val();
+            t_password = $('.t_password').val();
+            t_ph = $('.t_ph').val();
+            t_email = $('.t_email').val();
+
+            // 페이스북
+            if (!(f_username === '') && !(f_password === '')) {
+                $.ajax({
+                    url: "{% url 'aml:f_crawling' %}",
+                    type: 'POST',
+                    data: {
+                        'f_username': f_username,
+                        'f_password': f_password,
+                        'csrfmiddlewaretoken': '{{ csrf_token }}'
+                    },
+                    success: function (response) {
+                        console.log(response);
+                        if (response.facebook === '성공') {
+                            $('.processing_logs').append('<li>Facebook analysis completed.</li>');
+                        } else {
+                            $('.processing_logs').append('<li> Facebook : ' + response.error + '</li>');
+                        }
+                    },
+                    error: function (request, status, error) {
+                        $('.processing_logs').append('<li>Facebook error.</li>');
+                    }
+                });
+            } else {
+                $('.processing_logs').append('<li>Do not enter a Facebook account</li>');
+            };
+                // 트위터
+                if (!(t_username === '') && !(t_password === '')) {
+                    $.ajax({
+                        url: "{% url 'aml:t_crawling' %}",
+                        type: 'POST',
+                        data: {
+                            't_username': t_username,
+                            't_password': t_password,
+                            't_ph': t_ph,
+                            't_email': t_email,
+                            'csrfmiddlewaretoken': '{{ csrf_token }}'
+                        },
+                        success: function (response) {
+                            console.log(response);
+                            if (response.twitter === '성공') {
+                                $('.processing_logs').append('<li>Twitter analysis completed.</li>');
+                            } else {
+                                $('.processing_logs').append('<li> Twitter : ' + response.error + '</li>');
+                            }
+                        },
+                        error: function (request, status, error) {
+                            $('.processing_logs').append('<li>Twitter error.</li>');
+                        }
+                    });
+                    console.log('twitter')
+                } else {
+                    $('.processing_logs').append('<li>Do not enter a Twitter account</li>');
+                };
+
+                // 인스타그램
+                if (!(i_username === '') && !(i_password === '')) {
+                    $.ajax({
+                        url: "{% url 'aml:i_crawling' %}",
+                        type: 'POST',
+                        data: {
+                            'i_username': i_username,
+                            'i_password': i_password,
+                            'csrfmiddlewaretoken': '{{ csrf_token }}'
+                        },
+                        success: function (response) {
+                            console.log(response);
+                            if (response.instagram === '성공') {
+                                $('.processing_logs').append('<li>instagram analysis completed.</li>');
+                            } else {
+                                $('.processing_logs').append('<li> Instagram : ' + response.error + '</li>');
+                            }
+                        },
+                        error: function (request, status, error) {
+                            $('.processing_logs').append('<li>Instgram error.</li>');
+                        }
+                    });
+                    console.log('instagram')
+                } else {
+                    $('.processing_logs').append('<li>Do not enter a Instagram account</li>');
+                };
+
+                // 구글
+                if (!(g_username === '') && !(g_password === '')) {
+                    $.ajax({
+                        url: "{% url 'aml:g_auth_crawling' %}",
+                        type: 'POST',
+                        data: {
+                            'g_username': g_username,
+                            'g_password': g_password,
+                            'csrfmiddlewaretoken': '{{ csrf_token }}'
+                        },
+                        success: function (response) {
+                            console.log(response);
+                            setTimeout(function() {
+                               $('.processing_logs').append('<li> Gmail analysis completed.</li>');
+                            }, 30000);
+                            setTimeout(function() {
+                               $('.processing_logs').append('<li> Youtube analysis completed.</li>');
+                            }, 32000);
+                        },
+                        error: function (request, status, error) {
+                            $('.processing_logs').append('<li>Google error. ' + request + '</li>');
+                        }
+                    });
+                } else {
+                    $('.processing_logs').append('<li>Do not enter a Google account</li>');
+                }
+
+
+        }).ajaxStop(function () {
+            $.ajax({
+                url: "{% url 'aml:analysing_risk' %}",
+                type: 'POST',
+                data: {
+                    'f_username': $('.f_username').val(),
+                    'i_username': $('.i_username').val(),
+                    't_username': $('.t_username').val(),
+                    'g_username': $('.g_username').val(),
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                },
+                success: function (response) {
+                    console.log(response);
+                    setTimeout(function () {
+                        $('#form').submit();
+                    }, 3000);
+                },
+                error: function (request, status, error) {
+                    console.log(error)
+                }
+            });
+        });
+
+
+</script>
+{% endblock %}

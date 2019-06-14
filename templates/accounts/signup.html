@@ -1,0 +1,173 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+    <title>Sign Up</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'accounts/css/signup.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('{% static 'accounts/img/signin_bg.jpg' %}');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="ten_body">
+        <div class="signup_form_wrapper">
+            <div class="signup_form_title">
+                <h2>ASTER Risk Management <span class="ten_font_bold">Register</span></h2>
+            </div>
+            <div class="signup_form_content">
+                <form action="" method="post" name="signup_form" class="signup_form">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="group">
+                            <section class="section">
+                                <div class="form-group">
+                                    <h3>User Account *</h3>
+                                </div>
+                                <div class="form-group" data-tip="Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.">
+                                    {{ form.username }}
+                                    {% if form.username.errors %}
+                                            {% for error in form.username.errors %}
+                                                <span><strong>* {{ error|escape }}</strong></span>
+                                            {% endfor %}
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.password1 }}
+                                    {% if form.password1.errors %}
+                                            {% for error in form.password1.errors %}
+                                                <span><strong>* {{ error|escape }}</strong></span>
+                                            {% endfor %}
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.password2 }}
+                                    {% if form.password2.errors %}
+                                            {% for error in form.password2.errors %}
+                                                <span><strong>* {{ error|escape }}</strong></span>
+                                            {% endfor %}
+                                    {% endif %}
+                                </div>
+                            </section>
+                            <section class="section">
+                                <div class="form-group">
+                                    <h3>Personal Information *</h3>
+                                </div>
+                                <div class="form-group">
+                                    {{ form.first_name }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.last_name }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.email }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.government_id }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.phone_number }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.country_of_citizenship }}
+                                </div>
+                                <div class="date-group">
+                                    <div class="form-group">
+                                        <h3>Date of Birth *</h3>
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.date_of_birth }}
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="group">
+                            <section>
+                                <div class="form-group">
+                                    <h3>Residence Address *</h3>
+                                </div>
+                                <div class="form-group">
+                                    {{ form.address1 }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.address2 }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.address_city }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.address_zip_code }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.address_country }}
+                                </div>
+                            </section>
+                            <section>
+                                <div class="form-group">
+                                    <h3>Work Information *</h3>
+                                </div>
+                                <div class="form-group">
+                                    {{ form.company }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.company_field_of_business }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.company_state }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.company_country }}
+                                </div>
+                            </section>
+                            <section>
+                                <div class="form-group">
+                                    <h3>Additional Information</h3>
+                                </div>
+                                <div class="form-group">
+                                    {{ form.sns_facebook }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.sns_instagram }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.sns_twitter }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.sns_google }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.sns_linkedin }}
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <footer>
+                        <input type="submit" id="signup_button" class="btn btn-outline-dark btn-lg" value="Sign Up">
+                    </footer>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    <script src="{% static 'accounts/js/copyJs/js/jquery.js' %}"></script>
+    <script src="{% static 'accounts/js/copyJs/js/jquery.easing.1.3.js' %}"></script>
+    <script>
+
+    </script>
+{% endblock %}

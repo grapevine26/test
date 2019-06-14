@@ -1,0 +1,74 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Sign In</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'accounts/css/login.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+    <style>
+        .ten_body {
+            background-image: url('{% static 'accounts/img/signin_bg.jpg' %}');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .ten_signin_icon_id {
+            background-image: url('{% static 'accounts/img/signin_id.png' %}');
+        }
+
+        .ten_signin_icon_password {
+            background-image: url('{% static 'accounts/img/signin_password.png' %}');
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="ten_body">
+        <div class="signin_form_wrapper">
+            <div class="signin_form_title">
+                <h2><span class="ten_font_bold">ASTER</span> Risk Management</h2>
+            </div>
+            <div class="signin_form_content">
+                <form action="" method="post" name="signin_form" class="signin_form">
+                    {% csrf_token %}
+                    <div class="form-row">
+                            <section class="section">
+                                <div class="form-group">
+                                    {{ form.username }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.password }}
+                                </div>
+                                <div class="form-group">
+                                    {% if form.non_field_errors %}
+                                        {% for error in form.non_field_errors %}
+                                            <span><strong>* {{ error }}</strong></span>
+                                        {% endfor %}
+                                    {% endif %}
+                                </div>
+                            </section>
+                    </div>
+                    <footer>
+                        <input type="submit" id="signin_button" class="btn btn-outline-dark btn-lg" value="Sign In">
+                        <a href="{% url 'accounts:singup' %}" id="signup_button" class="btn btn-outline-dark btn-lg">Sign Up</a>
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    <script src="{% static 'accounts/js/copyJs/js/jquery.js' %}"></script>
+    <script src="{% static 'accounts/js/copyJs/js/jquery.easing.1.3.js' %}"></script>
+    <script>
+
+    </script>
+{% endblock %}

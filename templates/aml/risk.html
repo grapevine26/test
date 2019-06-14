@@ -1,0 +1,205 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>RISK</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'aml/css/risk.css' %}">
+    <style type="text/css">
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Nova+Mono|Roboto+Condensed" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <iframe src="{% static "aml/audio/13slide.mp3" %}" allow="autoplay" style="display:none" id="audio_aster01"></iframe>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <p style="background-color : #fc6e83; color : white;	padding : 23px;">ASTER Risk
+                            Management</p>
+                    </li>
+                    <li>
+                        <a href="{% url "aml:result" %}"><i class="fa fa-002"></i> Crawling DATA</a>
+                    </li>
+                    <li>
+                        <a class="active-menu" href="."><i class="fa fa-003"></i> Risk score</a>
+                    </li>
+<!--                    <li>-->
+<!--                        <a href="."><i class="fa fa-004"></i> Matching</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="."><i class="fa fa-005"></i> Fraud Investigations</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="."><i class="fa fa-006"></i> Relationship with friends</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="."><i class="fa fa-007"></i> Data extract</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="."><i class="fa fa-007"></i> Reason code</a>-->
+<!--                    </li>-->
+
+                    <li class="sign_out">
+                        <a href="{% url 'aml:home' %}"
+                           style="font-size: 20px; text-align: center; background-color: #121212;">Sign
+                            Out</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <div id="page-wrapper">
+            <div class="header">
+                <h1 class="page-header">
+                    Risk score
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'aml:home' %}">Home</a></li>
+                    <li class="result_001">Risk score</li>
+                </ol>
+                <div class="contentsDiv">
+                    <div class="intro">
+                        <h1>Risk sore, Agent Reason Code Trace</h1>
+                        <h2>3 Agent Sub Reports</h2>
+                        <h3>{# 날짜 넣기 #}</h3>
+                    </div>
+                    <div class="contents">
+                        <div class="final_div">
+                            <div class="final_triangle">
+                                <div class="one">Danger</div>
+
+                                <div class="two">Warning</div>
+
+                                <div class="three">Caution</div>
+
+                                <div class="four">Stability</div>
+                            </div>
+                        </div>
+                        <div class="table_div1">
+                            <table class="table">
+                                <caption>* FACEBOOK DATA BASE</caption>
+                                <tr>
+                                    <th colspan="4" class="table_name">Personal Information</th>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>{{ facebook.username }}</td>
+                                    <th>Address</th>
+                                    <td>{{ facebook.address1 }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Gender</th>
+                                    <td>{{ facebook.gender }}</td>
+                                    <th>Education</th>
+                                    <td>{{ facebook.university1 }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Date of birth</th>
+                                    <td>{{ facebook.birthday }}</td>
+                                    <th>Company</th>
+                                    <td>{{ facebook.company1 }}</td>
+                                </tr>
+                            </table>
+                            <table class="table">
+                                <caption>* AML DATA BASE</caption>
+                                <tr>
+                                    <th colspan="2" class="table_name">AML Hazard plot</th>
+                                </tr>
+                                <tr>
+                                    <th>Rating</th>
+                                    <td>{{ reason.rating }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Reason</th>
+                                    <td>{{ reason.reason }}</td>
+                                </tr>
+                                <tr>
+                                    <th>High frequency word</th>
+                                    <td>asdsadsad</td>
+                                </tr>
+                            </table>
+                            <table class="table">
+                                <caption>* SNS DATA BASE</caption>
+                                <tr>
+                                    <th colspan="2" class="table_name">SNS data propensity</th>
+                                </tr>
+                                <tr>
+                                    <th>Propensity</th>
+                                    <td>
+                                        Of the total {{ word_cnt }} words extracted from {{ facebook.username }}'s SNS
+                                        post,
+                                        {{ posi }} positive and {{ nega }} negative words
+                                        were found. {{ facebook.username }}'s propensity analysis assessment was
+                                        evaluated with a
+                                        positive factor of {{ result.positive }}% and a negative factor of
+                                        {{ result.negative }}%. {{ facebook.username }} is generally rated as having
+                                        a {{ result.propensity }} personality.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Positive</th>
+                                    <td>{{ result.positive }}%</td>
+                                </tr>
+                                <tr>
+                                    <th>Negative</th>
+                                    <td>{{ result.negative }}%</td>
+                                </tr>
+                            </table>
+                            <table class="table">
+                                <tr>
+                                    <th colspan="2" class="table_name">TCM score</th>
+                                </tr>
+                                <tr>
+                                    <th>T</th>
+                                    <td>{{ result.t_score }}</td>
+                                </tr>
+                                <tr>
+                                    <th>C</th>
+                                    <td>{{ result.c_score }}</td>
+                                </tr>
+                                <tr>
+                                    <th>M</th>
+                                    <td>{{ result.m_score }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript" src="{% static 'aml/js/risk.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var rating = '{{ reason.rating }}';
+            if (rating === 'Stability') {
+                $('.four').css('font-size', 'xx-large');
+                $('.table_name').css('background', 'rgb(77, 208, 225)');
+                $('th:not(.table_name)').css('color', 'rgb(77, 208, 225)')
+            } else if (rating === 'Caution') {
+                $('.three').css('font-size', 'xx-large');
+                $('.table_name').css('background', 'rgb(100, 181, 246)');
+                $('th:not(.table_name)').css('color', 'rgb(100, 181, 246)')
+            } else if (rating === 'Warning') {
+                $('.two').css('font-size', 'xx-large');
+                $('.table_name').css('background', 'rgb(149, 117, 205)');
+                $('th:not(.table_name)').css('color', 'rgb(149, 117, 205)')
+            } else if (rating === 'Danger') {
+                $('.one').css({'font-size': 'x-large', 'line-height': '7'});
+                $('.table_name').css('background', 'rgb(240, 98, 146)');
+                $('th:not(.table_name)').css('color', 'rgb(240, 98, 146)')
+            }
+        });
+    </script>
+{% endblock %}
+
+

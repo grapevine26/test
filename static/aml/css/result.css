@@ -1,0 +1,315 @@
+.demo {
+    padding: 100px 0;
+}
+
+.row {
+    padding-bottom: 43px;
+
+}
+
+.heading-title {
+    margin-bottom: 100px;
+}
+
+.table {
+    min-height: 186px;
+}
+
+.pricingTable {
+    display: none;
+    min-height: 517px;
+    height: 100%;
+    border: 2px solid #e3e3e3;
+    text-align: center;
+    position: relative;
+    padding-bottom: 40px;
+    transform: translateZ(0px);
+}
+
+.pricingTable:before,
+.pricingTable:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+
+.pricingTable:before {
+    transform: scaleY(0);
+    transform-origin: 100% 0 0;
+}
+
+.pricingTable:after {
+    transform: scaleX(0);
+    transform-origin: 0 100% 0;
+}
+
+.facebook:before {
+    border-right: 2px solid #3b5998;
+    border-left: 2px solid #3b5998;
+}
+
+.facebook:after {
+    border-bottom: 2px solid #3b5998;
+    border-top: 2px solid #3b5998;
+}
+
+/*linear-gradient(60deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);*/
+.youtube:before {
+    border-right: 2px solid #c4302b;
+    border-left: 2px solid #c4302b;
+}
+
+.youtube:after {
+    border-bottom: 2px solid #c4302b;
+    border-top: 2px solid #c4302b;
+}
+
+.instagram:before {
+    border-right: 2px solid #dc2743;
+    border-left: 2px solid #f09433;
+}
+
+.instagram:after {
+    border-bottom: 2px solid #e6683c;
+    border-top: 2px solid #e6683c;
+}
+
+.gmail:before {
+    border-right: 2px solid #c4302b;
+    border-left: 2px solid #c4302b;
+}
+
+.gmail:after {
+    border-bottom: 2px solid #c4302b;
+    border-top: 2px solid #c4302b;
+}
+
+.twitter:before {
+    border-right: 2px solid #00acee;
+    border-left: 2px solid #00acee;
+}
+
+.twitter:after {
+    border-bottom: 2px solid #00acee;
+    border-top: 2px solid #00acee;
+}
+
+.pricingTable:hover:before {
+    transform: scaleY(1);
+}
+
+.pricingTable:hover:after {
+    transform: scaleX(1);
+}
+
+.pricingTable .pricingTable-header {
+    color: #fff;
+    margin: -2px -2px 35px;
+    padding: 40px 0;
+}
+
+.pricingTable .facebook-header {
+    background: #3b5998;
+}
+
+.pricingTable .youtube-header {
+    background: #c4302b;
+}
+
+.pricingTable .instagram-header {
+    background: #f09433;
+    background: linear-gradient(40deg, #f99935 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.pricingTable .gmail-header {
+    background: #c4302b;
+}
+
+.pricingTable .twitter-header {
+    background: #00acee;
+}
+
+.pricingTable .heading {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.pricingTable .subtitle {
+    font-size: 14px;
+    display: block;
+}
+
+.pricingTable .price-value {
+    font-size: 72px;
+    font-weight: 600;
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.pricingTable .currency {
+    font-size: 45px;
+    font-weight: normal;
+    position: absolute;
+    top: 2px;
+    left: -30px;
+}
+
+.pricingTable .month {
+    font-size: 20px;
+    position: absolute;
+    bottom: 17px;
+    right: -40px;
+}
+
+.pricingTable .pricing-content {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.pricingTable .pricing-content li {
+    font-size: 16px;
+    color: #7a7e82;
+    line-height: 40px;
+}
+
+.pricingTable .read {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid #7a7e82;
+    border-right: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #7a7e82;
+    padding: 9px 30px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+.pricingTable .read:hover {
+    text-decoration: none;
+}
+
+.pricingTable .facebook_btn:hover {
+    text-decoration: none;
+    border-color: #3b5998;
+    color: #3b5998;
+}
+
+.pricingTable .twitter_btn:hover {
+    border-color: #00acee;
+    color: #00acee;
+}
+
+.pricingTable .instagram_btn:hover {
+    border-color: #e6683c;
+    color: #e6683c;
+}
+
+.pricingTable .youtube_btn:hover {
+    border-color: #c4302b;
+    color: #c4302b;
+}
+
+.pricingTable .gmail_btn:hover {
+    border-color: #c4302b;
+    color: #c4302b;
+}
+
+.pricingTable .read i {
+    font-size: 19px;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transition: all 0.3s ease 0s;
+}
+
+.pricingTable .read:hover i {
+    right: 5px;
+}
+
+.pricingTable .read:before,
+.pricingTable .read:after {
+    content: "";
+    display: block;
+    height: 30px;
+    border-left: 2px solid #7a7e82;
+    position: absolute;
+    right: -11px;
+    transition: all 0.3s ease 0s;
+}
+
+.pricingTable .read:before {
+    bottom: -6px;
+    transform: rotate(45deg);
+}
+
+.pricingTable .read:after {
+    top: -6px;
+    transform: rotate(-45deg);
+}
+
+.pricingTable .facebook_btn:hover:before,
+.pricingTable .facebook_btn:hover:after {
+    border-left-color: #3b5998;
+}
+
+.pricingTable .twitter_btn:hover:before,
+.pricingTable .twitter_btn:hover:after {
+    border-left-color: #00acee;
+}
+
+.pricingTable .instagram_btn:hover:before,
+.pricingTable .instagram_btn:hover:after {
+    border-left-color: #cc2366;
+}
+
+.pricingTable .youtube_btn:hover:before,
+.pricingTable .youtube_btn:hover:after {
+    border-left-color: #bc1888;
+}
+
+.pricingTable .gmail_btn:hover:before,
+.pricingTable .gmail_btn:hover:after {
+    border-left-color: #c4302b;
+}
+
+@media screen and (max-width: 990px) {
+    .pricingTable {
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-2 {
+        width: 20%;
+        min-height: 517px;
+    }
+}
+
+tr:last-child {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+#wrapper > nav > .sidebar-collapse > ul > li:first-child {
+    height: 70px;
+    text-align: center;
+}
+
+.contents {
+    width: 100%;
+}
+
+.form-control{
+    margin-bottom: 10px;
+}

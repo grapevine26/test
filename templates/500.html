@@ -1,0 +1,79 @@
+{% extends 'aml/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>RISK</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/risk.css' %}">
+    <style type="text/css">
+        .contentsDiv {
+            padding: 50px;
+        }
+
+        .intro {
+            margin: 0;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Nova+Mono|Roboto+Condensed" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <div id="wrapper">
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <p style="background-color : #fc6e83; color : white;	padding : 23px;">ASTER Risk
+                            Management</p>
+                    </li>
+                    <li>
+                        <a href="{% url "aml:result" %}"><i class="fa fa-002"></i> Crawling DATA</a>
+                    </li>
+                    <li>
+                        <a class="active-menu" href="."><i class="fa fa-003"></i> Risk score</a>
+                    </li>
+                    <li>
+                        <a href="."><i class="fa fa-004"></i> Matching</a>
+                    </li>
+                    <li>
+                        <a href="."><i class="fa fa-005"></i> Fraud Investigations</a>
+                    </li>
+                    <li>
+                        <a href="."><i class="fa fa-006"></i> Relationship with friends</a>
+                    </li>
+                    <li>
+                        <a href="."><i class="fa fa-007"></i> Data extract</a>
+                    </li>
+                    <li>
+                        <a href="."><i class="fa fa-007"></i> Reason code</a>
+                    </li>
+
+                    <li class="sign_out">
+                        <a href="{% url 'aml:home' %}"
+                           style="font-size: 20px; text-align: center; background-color: #121212;">Sign
+                            Out</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <div id="page-wrapper">
+            <div class="header">
+                <h1 class="page-header">
+                    500 ERROR
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'aml:home' %}">Home</a></li>
+                </ol>
+                <div class="contentsDiv">
+                    <div class="intro">
+                        <h1>Server Error</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
