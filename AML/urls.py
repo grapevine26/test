@@ -22,7 +22,7 @@ from django.conf.urls import (
 app_name = 'aml'
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.Home.as_view(), name='home'),
     path('analysing/', views.analysing, name='analysing'),
     path('result/', views.result, name='result'),
     path('risk/<str:facebook_id>/', views.risk, name='risk'),

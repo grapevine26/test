@@ -6,7 +6,7 @@ from django_countries.fields import CountryField
 class CustomUser(AbstractUser):
     government_id = models.CharField(max_length=20, verbose_name='Government ID', )
     phone_number = models.CharField(max_length=20, verbose_name='Phone Number')
-    date_of_birth = models.DateField(verbose_name='Date of Birth')
+    date_of_birth = models.DateField(null=True, verbose_name='Date of Birth')
     address1 = models.CharField(max_length=100, verbose_name='Address 1')
     address2 = models.CharField(max_length=100, verbose_name='Address 2')
     address_city = models.CharField(max_length=100, verbose_name='City')

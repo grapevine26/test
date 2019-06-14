@@ -11,13 +11,16 @@ from crawler_AML.crawler.Crawler_twitter import start as twitter
 from crawler_AML.crawler.Crawler_gmail import start as gmail
 from crawler_AML.crawler.Crawler_google import start as google
 from crawler_AML.analysis.analysis_result import sns_data
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, FormView, TemplateView, View
 
 
-def home(request):
-    ctx = {
-
-    }
-    return render(request, 'aml/home.html', ctx)
+class Home(TemplateView):
+    template_name = 'aml/home.html'
+# def home(request, pk):
+#     ctx = {
+#
+#     }
+#     return render(request, 'aml/home.html', ctx)
 
 
 def analysing(request):

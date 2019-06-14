@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'AML.apps.AmlConfig',
     'accounts.apps.AccountsConfig',
-    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -139,9 +138,7 @@ STATICFILES_DIRS = [
 ]
 
 LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'aml:home'
 LOGOUT_REDIRECT_URL = 'login'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
-
-CRISPY_TEMPLATE_PACK = 'bootstrap4'

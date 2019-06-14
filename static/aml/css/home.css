@@ -1,253 +1,66 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,300,500');
 
-
-input:focus {
-    outline: 0 0 0 0 !important;
-    box-shadow: 0 0 0 0 !important;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
+    min-height: 100%;
 }
 
 h3 {
     font-family: 'Poppins', sans-serif;
 }
 
+
 .box {
-    padding: 60px 0;
-    display: none;
+    top:0; left:0; bottom:0; right:0;
+    height:10%;
+    margin:7% auto;
 }
 
-.box-part {
-    background: #FFF;
-    border-radius: 10px;
-    padding: 20px 10px;
-    margin: 30px 0;
-}
-
-.box-part:hover {
-    background: #4183D7;
-}
-
-.box-part:hover .fa,
-.box-part:hover .title,
-.box-part:hover .text,
-.box-part:hover a {
-    color: #FFF;
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-}
-
-.card-background {
-    background: linear-gradient(to top, #eeeeee4d, #eeeeee4d);
-    color: white;
-}
-
-/* 페이스북 */
-.content_f {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-/* 페이스북 프로필 이미지 */
-.title_f + div > div {
+.wrapper{
     display: inline-block;
-}
-
-.p_img {
-    height: 200px;
-}
-
-/* 페이스북 유저 정보 */
-.info_f {
     width: 100%;
+    height: 100%;
 }
 
-.info_list_f > li {
-    margin-bottom: 10px;
+.header{
+    margin: 0;
+    display: inline-flex;
 }
 
-/* 페이스북 유저 정보2 */
-.friends_f > div > span {
-    font-size: 1.3em;
-    border: solid 2px white;
+.header h2 {
+    font-size: 30px;
+    color: rgba(255, 224, 199, 0.973);
+    font-weight: 300;
+    margin: 0 auto;
 }
 
-.friends_list_f {
-    padding-left: 0;
-    list-style: none;
+.header .ten_font_bold {
+    font-weight: 800;
+    color: rgba(255, 240, 230, 0.973);
 }
 
-.friends_list_f > li {
-    margin-bottom: 10px;
+.title{
+    margin-left: 15px;
+    
+}
+.user_button {
+    right: 0;
 }
 
-/* 인스타그램 */
-.content_i {
-    display: flex;
-    margin-bottom: 20px;
+.row{
+    display: -webkit-box;;
+    margin: 10px 0 0 0;
+}
+.group{
+    height: 700px;
+    width: 50%;
+    padding:0 1% ;
 }
 
-/* 인스타그램 프로필 이미지 */
-.title_i + div > div {
+.content_intro {
     display: inline-block;
-}
-
-/* 인스타그램 유저 정보 */
-.info_i {
     width: 100%;
-}
-
-.info_list_i > li {
-    margin-bottom: 10px;
-}
-
-/* 인스타그램 유저 정보2 */
-.following_i > div > span {
-    font-size: 1.3em;
-    border: solid 2px white;
-}
-
-.following_list_i {
-    padding-left: 0;
-    list-style: none;
-}
-
-.following_list_i > li {
-    margin-bottom: 10px;
-}
-
-/* 트위터 */
-.content_t {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-/* 트위터 프로필 이미지 */
-.title_t + div > div {
-    display: inline-block;
-}
-
-/* 트위터 유저 정보 */
-.info_t {
-    width: 100%;
-}
-
-.info_list_t > li {
-    margin-bottom: 10px;
-}
-
-/* 트위터 유저 정보2 */
-.following_t > div > span {
-    font-size: 1.3em;
-    border: solid 2px white;
-}
-
-.following_list_t {
-    padding-left: 0;
-    list-style: none;
-}
-
-.following_list_t > li {
-    margin-bottom: 10px;
-}
-
-/* 유튜브 */
-.content_y {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-/* 유튜브 프로필 이미지 */
-.title_y + div > div {
-    display: inline-block;
-}
-
-/* 유튜브 유저 정보 */
-.info_y {
-    width: 100%;
-}
-
-.info_list_y > li {
-    margin-bottom: 10px;
-}
-
-/* 유튜브 유저 정보2 */
-.subscribe_y > div > span {
-    font-size: 1.3em;
-    border: solid 2px white;
-}
-
-.subscribe_list_y {
-    padding-left: 0;
-    list-style: none;
-}
-
-.subscribe_list_y > div {
-    margin-bottom: 10px;
-    border-bottom: solid 2px white;
-}
-
-.profile_img_y > img {
-    height: 100px;
-}
-
-/* 지메일 */
-.content_g {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-/* 지메일 유저 정보 */
-.info_g {
-    width: 100%;
-}
-
-.info_list_g > li {
-    margin-bottom: 10px;
-}
-
-/* 지메일 유저 정보2 */
-.mail_list_g > div > span {
-    font-size: 1.3em;
-    border: solid 2px white;
-}
-
-.mail_table {
-    display: none;
-}
-
-th {
-    text-align: center;
-}
-
-.span {
-    border-bottom: solid 2px white;
-    padding: 5px;
-    display: none;
-}
-
-.re_submit {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-
-
-
-.signin_form_wrapper {
-    text-align: center;
-    margin-top: 8.60529%;
-}
-
-.signin_form_content {
-    margin: 20px auto;
-    display: inline-block;
-    width: 370px;
-    height: auto;
+    height: 700px;
     background: rgba(255, 255, 255, 0.8);
     padding: 30px;
     -webkit-border-radius: 4px;
@@ -255,17 +68,29 @@ th {
     border-radius: 4px;
 }
 
-.signin_form_title h2 {
-    font-size: 30px;
-    color: rgba(255, 224, 199, 0.973);
-    font-weight: 300;
-    margin: 0px auto;
+.content_user_info {
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+    height: 475px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.content_button {
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
 
-.signin_form_title .ten_font_bold {
-    font-weight: 800;
-    color: rgba(255, 240, 230, 0.973);
-}
+
 
 .signin_form_content section {
     margin: 0;
@@ -342,9 +167,10 @@ th {
 fieldset {
     margin-bottom: 20px;
 }
+
 /*.signin_form_content {*/
-    /*margin: 0;*/
-    /*padding: 0;*/
+/*margin: 0;*/
+/*padding: 0;*/
 /*}*/
 
 .signin_form_content .input .icon-append + input, .signin_form_content .textarea .icon-append + textarea {
@@ -389,7 +215,6 @@ fieldset {
     font-weight: 300;
 }
 
-
 .signin_form_content .tooltip-bottom-right {
     top: 100%;
     margin-top: 15px;
@@ -412,7 +237,6 @@ fieldset {
     -moz-transition: margin 0.3s, opacity 0.3s;
     -webkit-transition: margin 0.3s, opacity 0.3s;
 }
-
 
 .signin_form_content .tooltip-bottom-right:after {
     bottom: 100%;
@@ -580,6 +404,7 @@ input[type="radio"], input[type="checkbox"] {
 .ten_signin_icon_password {
     background-image: url('/img/icons/signin_password.png');
 }
+
 .fieldset {
     margin-bottom: 20px;
 }
