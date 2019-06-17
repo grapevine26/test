@@ -17,31 +17,10 @@ class CustomUserAdmin(UserAdmin):
             }
         ),
         (
-            ('Personal Information '), {
+            ('Employee Information '), {
                 'fields': (
                     'first_name', 'last_name', 'email', 'government_id', 'phone_number',
-                    'date_of_birth', 'country_of_citizenship'
-                )
-            }
-        ),
-        (
-            ('Residence Address'), {
-                'fields': (
-                    'address1', 'address2', 'address_city', 'address_zip_code', 'address_country'
-                )
-            }
-        ),
-        (
-            ('Work Infomation'), {
-                'fields': (
-                    'company', 'company_field_of_business', 'company_state', 'company_country'
-                )
-            }
-        ),
-        (
-            ('Additional Information'), {
-                'fields': (
-                    'sns_facebook', 'sns_instagram', 'sns_twitter', 'sns_google', 'sns_linkedin'
+                    'employee_id', 'employment_date', 'department', 'work_status', 'usage'
                 )
             }
         ),

@@ -37,7 +37,7 @@ h3 {
 .signup_form_content{
     margin: 20px auto;
     display: inline-block;
-    width: 820px;
+    width: 380px;
     height: auto;
     background: rgba(255, 255, 255, 0.8);
     padding: 30px;
@@ -47,7 +47,7 @@ h3 {
 }
 
 .group{
-    width: 50%;
+    width: 100%;
     padding: 0 20px 20px 20px;
 }
 .form-group{
@@ -75,7 +75,7 @@ h3 {
     margin-bottom: 23px;
 }
 
-input[type='text'], input[type='password'] {
+input[type='text'], input[type='password'], input[type='email'] {
     box-sizing: border-box;
     font-family: initial;
     padding-left: 1.25rem;

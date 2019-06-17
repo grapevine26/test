@@ -4,6 +4,8 @@ from .models import (
 from django.http import JsonResponse
 from django.shortcuts import render, redirect, render_to_response
 from django.template import RequestContext
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from crawler_AML.crawler.Crawler_facebook import start as facebook
 from crawler_AML.crawler.Crawler_instagram import start as instagram
 from crawler_AML.crawler.Crawler_youtube import start as youtube
@@ -14,13 +16,10 @@ from crawler_AML.analysis.analysis_result import sns_data
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, FormView, TemplateView, View
 
 
+@method_decorator(login_required, name='dispatch')
 class Home(TemplateView):
     template_name = 'aml/home.html'
-# def home(request, pk):
-#     ctx = {
-#
-#     }
-#     return render(request, 'aml/home.html', ctx)
+
 
 
 def analysing(request):

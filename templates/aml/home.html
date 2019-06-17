@@ -37,29 +37,20 @@
             <div class="wrapper">
                 <div class="header">
                     <div class="title"><h2><span class="ten_font_bold">ASTER</span> Risk Management</h2></div>
-
                     {% if user.is_authenticated %}
                         <div class="user_button">
-                            <a href="{% url 'logout' %}" class="btn btn-outline-dark btn-lg">LOGOUT</a>
+                            <a href="{% url 'admin:index' %}" class="btn btn-outline-dark btn-lg admin">Administration</a>
+                            <a href="{% url 'logout' %}" class="btn btn-outline-dark btn-lg logout">Logout</a>
                         </div>
                     {% endif %}
                 </div>
                 <div class="row">
                     <div class="group">
-                        <div class="content_intro"></div>
-                    </div>
-                    <div class="group">
-                        <div class="content_user_info">
+                        <div class="content_info">
 
                         </div>
-                        <div class="content_button">
-                            {% if user.is_authenticated %}
-                                {% if user.is_staff %}
-                                    <a href="{% url 'admin:index' %}" class="btn btn-outline-dark btn-lg">Admin Site</a>
-                                {% else %}
-                                    <a href="{% url 'aml:result' %}" class="btn btn-outline-dark btn-lg">START</a>
-                                {% endif %}
-                            {% endif %}
+                        <div class="content_info">
+
                         </div>
                     </div>
                 </div>

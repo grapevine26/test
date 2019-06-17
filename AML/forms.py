@@ -1,34 +1,26 @@
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm
-from django.contrib.auth.admin import UserAdmin
-from .models import CustomUser
+from .models import ClientInformation
 from django import forms
 from datetime import datetime
 
-year = datetime.today().year
-YEARS = [x for x in range(1930, year)]
 
-
-class CustomUserCreationForm(UserCreationForm):
-    employment_date = forms.DateField(widget=forms.SelectDateWidget(years=YEARS))
-
+class ClientInformationForm(forms.ModelForm):
     class Meta:
-        model = CustomUser
+        model = ClientInformation
         fields = (
-            'username', 'password1', 'password2', 'first_name', 'last_name', 'email', 'phone_number', 'employee_id',
-            'department', 'employment_date'
+            'name', 'government_id', 'phone_number', 'date_of_birth', 'address1', 'address2', 'address_city',
+            'address_zip_code', 'address_country', 'password', 'company', 'company_field_of_business', 'company_state',
+            'company_country', 'sns_facebook', 'sns_instagram', 'sns_twitter', 'sns_google', 'sns_linkedin'
         )
-        labels = {
-            'username': 'ID',
-        }
 
     def __init__(self, *args, **kwargs):
-        super(UserCreationForm, self).__init__(*args, **kwargs)
+        super(ClientInformationForm, self).__init__(*args, **kwargs)
         # help_text 안보이게
         # for fieldname in ['username', 'password1', 'password2']:
         #     self.fields[fieldname].help_text = None
         # 필수입력
         for i in self.fields:
-                self.fields[i].required = True
+            self.fields[i].required = True
         # bootstrap class 추가
         for i in self.fields:
             self.fields[i].widget.attrs.update({'class': 'form-control'})
@@ -45,11 +37,3 @@ class CustomUserCreationForm(UserCreationForm):
              })
         self.fields['password2'].widget.attrs.update(
             {'title': self.fields['password2'].help_text})
-
-
-class CustomUserChangeForm(UserChangeForm):
-    class Meta:
-        model = CustomUser
-        fields = ('username', 'password')
-
-

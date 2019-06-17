@@ -1,6 +1,35 @@
 from django.db import models
 from django.utils import timezone
 from datetime import datetime
+from django_countries.fields import CountryField
+
+
+class ClientInformation(models.Model):
+    no_index = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=255, null=True, verbose_name='Name')
+    government_id = models.CharField(max_length=255, null=True,  verbose_name='Government ID')
+    phone_number = models.CharField(max_length=255, null=True, verbose_name='Phone Number')
+    date_of_birth = models.DateField(verbose_name='Date of Birth')
+    address1 = models.CharField(max_length=255, null=True, verbose_name='Address 1')
+    address2 = models.CharField(max_length=255, null=True, verbose_name='Address 2')
+    address_city = models.CharField(max_length=255, null=True, verbose_name='City')
+    address_zip_code = models.CharField(max_length=255, null=True, verbose_name='ZIP Code')
+    address_country = CountryField(verbose_name='Country', blank_label='Country Select')
+    country_of_citizenship = CountryField(verbose_name='Country of Citizenship', blank_label='Country of Citizenship Select')
+    company = models.CharField(max_length=255, null=True, verbose_name='Company')
+    company_field_of_business = models.CharField(max_length=20, null=True, verbose_name='Company Field of Business')
+    company_state = models.CharField(max_length=255, null=True, verbose_name='State')
+    company_country = CountryField(verbose_name='Country', blank_label='Country Select')
+    sns_facebook = models.CharField(max_length=255, null=True, verbose_name='Facebook ID')
+    sns_instagram = models.CharField(max_length=255, null=True, verbose_name='Instagram ID')
+    sns_twitter = models.CharField(max_length=255, null=True, verbose_name='Twitter ID')
+    sns_google = models.CharField(max_length=255, null=True, verbose_name='Google ID')
+    sns_linkedin = models.CharField(max_length=255, null=True, verbose_name='Linkedin ID')
+    inserted_time = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        template = '{0.user_id} {0.username}'
+        return template.format(self)
 
 
 class FacebookInfo(models.Model):
@@ -25,7 +54,7 @@ class FacebookInfo(models.Model):
     contact3 = models.CharField(max_length=255, null=True, default=None)
     contact4 = models.CharField(max_length=255, null=True, default=None)
     friends_cnt = models.IntegerField(null=True, default=None)
-    insertedTime = models.DateTimeField(auto_now_add=True)
+    inserted_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         template = '{0.user_id} {0.username}'
@@ -79,7 +108,7 @@ class InstagramInfo(models.Model):
     follower_cnt = models.IntegerField(null=True, default=None)
     following_cnt = models.IntegerField(null=True, default=None)
     like_cnt = models.IntegerField(null=True, default=None)
-    insertedTime = models.DateTimeField(auto_now_add=True)
+    inserted_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         template = '{0.user_id} {0.username}'
@@ -131,7 +160,7 @@ class TwitterInfo(models.Model):
     following_cnt = models.IntegerField(null=True, default=None)
     follower_cnt = models.IntegerField(null=True, default=None)
     joined_date = models.DateField(null=True, default=None)
-    insertedTime = models.DateTimeField(auto_now_add=True)
+    inserted_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         template = '{0.user_id} {0.username}'
@@ -193,7 +222,7 @@ class YoutubeInfo(models.Model):
     subscribe_cnt = models.IntegerField(null=True, default=None)
     recent_video_cnt = models.IntegerField(null=True, default=None)
     comment_history_cnt = models.IntegerField(null=True, default=None)
-    insertedTime = models.DateTimeField(auto_now_add=True)
+    inserted_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         template = '{0.user_id} {0.username}'
@@ -242,7 +271,7 @@ class GmailInfo(models.Model):
     username = models.CharField(max_length=255, null=True, default=None)
     email = models.CharField(max_length=255, null=True, default=None)
     mail_cnt = models.IntegerField(null=True, default=None)
-    insertedTime = models.DateTimeField(auto_now_add=True)
+    inserted_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         template = '{0.user_id}'
