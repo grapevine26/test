@@ -23,7 +23,7 @@ app_name = 'aml'
 
 urlpatterns = [
     path('', views.Home.as_view(), name='home'),
-    path('analysing/', views.analysing, name='analysing'),
+    path('analysing/<int:pk>/', views.Analysing.as_view(), name='analysing'),
     path('result/', views.result, name='result'),
     path('risk/<str:facebook_id>/', views.risk, name='risk'),
     path('analysing_risk/', views.analysing_risk, name='analysing_risk'),

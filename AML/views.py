@@ -1,9 +1,9 @@
 from .models import (
-    FacebookInfo, InstagramInfo, TwitterInfo, GmailInfo, YoutubeInfo, Result, Reason
+    Client, FacebookInfo, InstagramInfo, TwitterInfo, GmailInfo, YoutubeInfo, Result, Reason
 )
+from .forms import ClientForm
 from django.http import JsonResponse
 from django.shortcuts import render, redirect, render_to_response
-from django.template import RequestContext
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from crawler_AML.crawler.Crawler_facebook import start as facebook
@@ -13,13 +13,55 @@ from crawler_AML.crawler.Crawler_twitter import start as twitter
 from crawler_AML.crawler.Crawler_gmail import start as gmail
 from crawler_AML.crawler.Crawler_google import start as google
 from crawler_AML.analysis.analysis_result import sns_data
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView, FormView, TemplateView, View
+from django.views.generic import ListView, CreateView, UpdateView, FormView, TemplateView, View
+from django.views.generic.detail import DetailView, SingleObjectMixin, ContextMixin, SingleObjectTemplateResponseMixin
+from django.urls import reverse_lazy, reverse
 
 
 @method_decorator(login_required, name='dispatch')
-class Home(TemplateView):
+class Home(FormView):
+    form_class = ClientForm
     template_name = 'aml/home.html'
 
+    def get_success_url(self, **kwargs):
+        obj = Client.objects.order_by('-pk')[0].pk
+        return reverse('aml:analysing', args=(obj,))
+
+    def form_valid(self, form):
+        form.instance.analyst = self.request.user
+        form.save()
+        return super(Home, self).form_valid(form)
+    # def get_success_url(self):
+    #     return reverse_lazy('aml:analysing', kwargs={'pk': self.kwargs['pk']})
+    # def get_object(self):
+    #     self.request.user
+
+
+class Analysing(DetailView):
+    model = Client
+    template_name = 'aml/analysing.html'
+
+    # def get(self, request, *args, **kwargs):
+    #     client = self.get_context_data(object=self.get_object())
+    #     print(client)
+    #     return render(request, 'aml/analysing.html', client)
+
+    def get_context_data(self, **kwargs):
+        context = super(Analysing, self).get_context_data(**kwargs)
+        return context
+
+    # def post(self, request, *args, **kwargs):
+    #     # self.object = self.get_object()
+    #     # self.object.view_count += 1
+    #     # self.object.save()
+    #     # post = self.get_context_data(object=self.object)
+    #     return render(request, 'aml/analysing.html', self.get_object())
+
+    # def get_context_data(self, **kwargs):
+    #     context = super(Analysing, self).get_context_data(**kwargs)
+    #     context['client'] = ClientInformation.objects.filter(pk=self.get_object())
+    #     return context
+    #
 
 
 def analysing(request):

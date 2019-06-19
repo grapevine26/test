@@ -64,5 +64,8 @@
     <script src="{% static 'accounts/js/copyJs/js/jquery.js' %}"></script>
     <script src="{% static 'accounts/js/copyJs/js/jquery.easing.1.3.js' %}"></script>
     <script>
+        {% if user.is_authenticated %}
+            location.replace({% url 'aml:home' %});
+        {% endif %}
     </script>
 {% endblock %}

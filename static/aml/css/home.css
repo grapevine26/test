@@ -5,6 +5,11 @@ body {
     min-height: 100%;
 }
 
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
 h3 {
     font-family: 'Poppins', sans-serif;
 }
@@ -15,7 +20,7 @@ h3 {
     bottom: 0;
     right: 0;
     height: 10%;
-    margin: 7% auto;
+    margin: 6.2% auto;
 }
 
 .wrapper {
@@ -74,7 +79,7 @@ h3 {
 .group {
     background: rgba(255, 255, 255, 0.8);
     display: flex;
-    height: 700px;
+    height: 770px;
     width: 100%;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -102,7 +107,30 @@ h3 {
     color: #666;
 }
 
-
 .btn-outline-dark:hover {
     font-weight: 400;
+}
+.date-group span {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.date-group > .form-group > select{
+    margin-bottom: 10px;
+}
+
+.form-control {
+    height: calc(3.25rem + 2px);
+    border: none;
+    padding: 0 10px;
+    font-size: 18px;
+}
+.form-control:focus{
+    border: solid 1px #6b7b8c;
+}
+
+footer{
+    text-align: right;
+}
+form {
+    width: 100%;
 }

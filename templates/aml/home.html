@@ -39,20 +39,115 @@
                     <div class="title"><h2><span class="ten_font_bold">ASTER</span> Risk Management</h2></div>
                     {% if user.is_authenticated %}
                         <div class="user_button">
-                            <a href="{% url 'admin:index' %}" class="btn btn-outline-dark btn-lg admin">Administration</a>
+                            <a href="{% url 'admin:index' %}"
+                               class="btn btn-outline-dark btn-lg admin">Administration</a>
                             <a href="{% url 'logout' %}" class="btn btn-outline-dark btn-lg logout">Logout</a>
                         </div>
                     {% endif %}
                 </div>
                 <div class="row">
-                    <div class="group">
-                        <div class="content_info">
+                    <form action="" method="post" name="analysing_form" class="analysing_form">
+                        {% csrf_token %}
+                        <div class="group">
+                            <div class="content_info">
+                                <section class="section">
+                                    <div class="form-group">
+                                        <h3>Personal information</h3>
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.first_name }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.last_name }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.government_id }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.phone_number }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.email }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.country_of_citizenship }}
+                                    </div>
+                                    <div class="date-group">
+                                        <div class="form-group">
+                                            <span>Date of birth</span>
+                                        </div>
+                                        <div class="form-group">
+                                            {{ form.date_of_birth }}
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="section">
+                                    <div class="form-group">
+                                        <h3>Residence address</h3>
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.address1 }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.address2 }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.address_city }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.address_zip_code }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.address_country }}
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="content_info">
+                                <section class="section">
+                                    <div class="form-group">
+                                        <h3>Work Information</h3>
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.company }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.company_field_of_business }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.company_state }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.company_country }}
+                                    </div>
+                                </section>
+                                <section class="section">
+                                    <div class="form-group">
+                                        <h3>SNS Additional</h3>
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.sns_facebook }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.sns_instagram }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.sns_twitter }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.sns_google }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.sns_linkedin }}
+                                    </div>
 
+                                </section>
+                                <footer>
+                                    <input type="submit" id="signin_button" class="btn btn-dark btn-lg"
+                                           value="Analysing start">
+                                </footer>
+                            </div>
                         </div>
-                        <div class="content_info">
-
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -95,6 +95,7 @@
         <div class="processing_img_wrapper">
             <img src="{% static 'aml/img/evalgear_loading.gif' %}"/>
             <h1 id="main_title">Analysing</h1>
+                {{ client.pk }}
             <br/>
             <br/>
             <ul class="processing_logs">
@@ -104,18 +105,15 @@
     </section>
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-<form style="display: none;" action="{% url 'aml:result' %}" method="post" id="form">{% csrf_token %}
-    <input type="hidden" name="f_username" class="f_username" value="{{ f_username }}">
-    <input type="hidden" name="f_password" class="f_password" value="{{ f_password }}">
-    <input type="hidden" name="i_username" class="i_username" value="{{ i_username }}">
-    <input type="hidden" name="i_password" class="i_password" value="{{ i_password }}">
-    <input type="hidden" name="g_username" class="g_username" value="{{ g_username }}">
-    <input type="hidden" name="g_password" class="g_password" value="{{ g_password }}">
-    <input type="hidden" name="t_username" class="t_username" value="{{ t_username }}">
-    <input type="hidden" name="t_password" class="t_password" value="{{ t_password }}">
-    <input type="hidden" name="t_ph" class="t_ph" value="{{ t_ph }}">
-    <input type="hidden" name="t_email" class="t_email" value="{{ t_email }}">
-</form>
+{#<form style="display: none;" action="{% url 'aml:result' %}" method="post" id="form">{% csrf_token %}#}
+{#    <input type="hidden" name="f_id" class="f_id" value="{{ f_id }}">#}
+{#    <input type="hidden" name="i_id" class="i_id" value="{{ i_id }}">#}
+{#    <input type="hidden" name="t_id" class="t_id" value="{{ t_id }}">#}
+{#    <input type="hidden" name="g_id" class="g_id" value="{{ g_id }}">#}
+{#    <input type="hidden" name="l_id" class="l_id" value="{{ l_id }}">#}
+{#    <input type="hidden" name="ph" class="t_ph" value="{{ ph }}">#}
+{#    <input type="hidden" name="email" class="t_email" value="{{ email }}">#}
+{#</form>#}
 {% endblock %}
 
 {% block script %}
@@ -143,16 +141,18 @@
                 }
             }, 200);
 
-            f_username = $('.f_username').val();
-            f_password = $('.f_password').val();
-            i_username = $('.i_username').val();
-            i_password = $('.i_password').val();
-            g_username = $('.g_username').val();
-            g_password = $('.g_password').val();
-            t_username = $('.t_username').val();
-            t_password = $('.t_password').val();
-            t_ph = $('.t_ph').val();
-            t_email = $('.t_email').val();
+
+            first_name = {{ client.first_name }}
+            last_name = {{ client.last_name }}
+            ph = {{ client.phone_number }}
+            ph = {{ client.phone_number }}
+            email = {{ client.email }}
+            f_id = {{ client.sns_facebook }}
+            i_id = {{ client.sns_instagram }}
+            g_id = {{ client.sns_google }}
+            t_id = {{ client.sns_twitter }}
+            l_id = {{ client.sns_linkedin }}
+
 
             // 페이스북
             if (!(f_username === '') && !(f_password === '')) {

@@ -59,12 +59,12 @@ h3 {
 
 .form-control {
     height: calc(3.25rem + 2px);
-    border: solid 1px #6b7b8c;
+    border: none;
     padding: 0 10px;
     font-size: 18px;
 }
 .form-control:focus{
-    border: solid 1px #ffffff;
+    border: solid 1px #6b7b8c;
 }
 .signin_form_content footer {
     display: block;
