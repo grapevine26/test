@@ -24,15 +24,12 @@ app_name = 'aml'
 urlpatterns = [
     path('', views.Home.as_view(), name='home'),
     path('analysing/<int:pk>/', views.Analysing.as_view(), name='analysing'),
-    path('result/', views.result, name='result'),
-    path('risk/<str:facebook_id>/', views.risk, name='risk'),
-    path('analysing_risk/', views.analysing_risk, name='analysing_risk'),
+    path('result/<int:pk>/', views.ResultView.as_view(), name='result'),
     path('f_crawling/', views.f_crawling, name='f_crawling'),
     path('i_crawling/', views.i_crawling, name='i_crawling'),
     path('t_crawling/', views.t_crawling, name='t_crawling'),
     path('y_crawling/', views.y_crawling, name='y_crawling'),
     path('g_crawling/', views.g_crawling, name='g_crawling'),
-    path('g_auth_crawling/', views.g_auth_crawling, name='g_auth_crawling'),
 
 ]
 

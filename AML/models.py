@@ -51,10 +51,12 @@ class Result(models.Model):
     t_score = models.IntegerField(null=True, default=None)
     c_score = models.IntegerField(null=True, default=None)
     m_score = models.IntegerField(null=True, default=None)
-    user_rate = models.CharField(max_length=50, null=True, default=None)
+    rating = models.CharField(max_length=50, null=True, default=None)
+    reason = models.CharField(max_length=255, null=True, default=None)
     sns_word_cnt = models.IntegerField(null=True, default=None)
     positive_word_cnt = models.IntegerField(null=True, default=None)
     negative_word_cnt = models.IntegerField(null=True, default=None)
+
 
     def str(self):
         template = '{0.client}'
@@ -64,61 +66,23 @@ class Result(models.Model):
 class FacebookInfo(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
     page_id = models.CharField(max_length=255, null=True, default=None)
-    username = models.CharField(max_length=255, null=True, default=None)
-    gender = models.CharField(max_length=255, null=True, default=None)
-    phone_number = models.CharField(max_length=255, null=True, default=None)
-    birthday = models.CharField(max_length=255, null=True, default=None)
-    company1 = models.CharField(max_length=255, null=True, default=None)
-    company2 = models.CharField(max_length=255, null=True, default=None)
-    company3 = models.CharField(max_length=255, null=True, default=None)
-    university1 = models.CharField(max_length=255, null=True, default=None)
-    university2 = models.CharField(max_length=255, null=True, default=None)
-    university3 = models.CharField(max_length=255, null=True, default=None)
-    address1 = models.CharField(max_length=255, null=True, default=None)
-    address2 = models.CharField(max_length=255, null=True, default=None)
-    address3 = models.CharField(max_length=255, null=True, default=None)
-    contact1 = models.CharField(max_length=255, null=True, default=None)
-    contact2 = models.CharField(max_length=255, null=True, default=None)
-    contact3 = models.CharField(max_length=255, null=True, default=None)
-    contact4 = models.CharField(max_length=255, null=True, default=None)
-    friends_cnt = models.IntegerField(null=True, default=None)
+    name = models.CharField(max_length=255, null=True, default=None)
+    work = models.CharField(max_length=255, null=True, default=None)
+    current_city = models.CharField(max_length=255, null=True, default=None)
+    hometown = models.CharField(max_length=255, null=True, default=None)
+    education = models.CharField(max_length=255, null=True, default=None)
+    music_like = models.CharField(max_length=255, null=True, default=None)
+    book_like = models.CharField(max_length=255, null=True, default=None)
+    movie_like = models.CharField(max_length=255, null=True, default=None)
+    tv_like = models.CharField(max_length=255, null=True, default=None)
+    games_like = models.CharField(max_length=255, null=True, default=None)
+    athletes_like = models.CharField(max_length=255, null=True, default=None)
+    other_like = models.TextField(null=True, default=None)
+    photo = models.IntegerField(null=True, default=None)
     inserted_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         template = '{0.client} {0.username}'
-        return template.format(self)
-
-
-class FacebookPost(models.Model):
-    client = models.ForeignKey(Client, on_delete=models.CASCADE)
-    post_text = models.TextField(null=True, default=None)
-    post_info = models.CharField(max_length=255, null=True, default=None)
-    post_date = models.DateField(null=True, default=None)
-
-    def __str__(self):
-        template = '{0.client} {0.post_text}'
-        return template.format(self)
-
-
-class FacebookFriends(models.Model):
-    client = models.ForeignKey(Client, on_delete=models.CASCADE)
-    friends_name = models.CharField(max_length=255, null=True, default=None)
-    friends_info = models.CharField(max_length=255, null=True, default=None)
-    friends_id = models.CharField(max_length=255, null=True, default=None)
-
-    def __str__(self):
-        template = '{0.client} {0.friends_name}'
-        return template.format(self)
-
-
-class FacebookReplyCnt(models.Model):
-    client = models.ForeignKey(Client, on_delete=models.CASCADE)
-    friends_name = models.CharField(max_length=255, null=True, default=None)
-    friends_id = models.CharField(max_length=255, null=True, default=None)
-    cnt = models.IntegerField(null=True, default=None)
-
-    def __str__(self):
-        template = '{0.client} {0.friends_name}'
         return template.format(self)
 
 

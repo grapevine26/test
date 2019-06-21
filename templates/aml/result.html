@@ -2,537 +2,169 @@
 {% load static %}
 
 {% block title %}
-    <title>result</title>
+    <title>RISK</title>
 {% endblock %}
 
 {% block css %}
     <link rel="stylesheet" href="{% static 'aml/css/result.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Nova+Mono|Roboto+Condensed" rel="stylesheet">
 {% endblock %}
-
 {% block content %}
-    <iframe src="{% static "aml/audio/4slide.mp3" %}" allow="autoplay" style="display:none" id="audio_aster01"></iframe>
-    <div id="wrapper">
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                    <li>
-                        <p style="background-color : #fc6e83; color : white;	padding : 23px;">ASTER Risk
-                            Management</p>
-                    </li>
-                    <li>
-                        <a class="active-menu" href="."><i class="fa fa-002"></i> Crawling DATA</a>
-                    </li>
-                    <li>
-                        {% if f_id %}
-                            <a href="{% url "aml:risk" f_id %}"><i class="fa fa-003"></i> Risk score </a>
-                        {% endif %}
-                    </li>
-<!--                    <li>-->
-<!--                        <a href="."><i class="fa fa-004"></i> Matching</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="."><i class="fa fa-005"></i> Fraud Investigations</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="."><i class="fa fa-006"></i> Relationship with friends</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="."><i class="fa fa-007"></i> Data extract</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="."><i class="fa fa-007"></i> Reason code</a>-->
-<!--                    </li>-->
+    {% with client.result_set.all|first as result %}
+        <iframe src="{% static "aml/audio/13slide.mp3" %}" allow="autoplay" style="display:none"
+                id="audio_aster01"></iframe>
+        <div id="wrapper">
+            <div id="page-wrapper">
+                <div class="header">
+                    <h1 class="page-header">
+                        Analyzed Result
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'aml:home' %}">Home</a></li>
+                        <li class="result_001">Analyzed Result</li>
+                    </ol>
+                    <div class="contentsDiv">
+                        <div class="contents">
+                            <div class="final_div">
+                                <div class="final_triangle">
+                                    <div class="one">Danger</div>
 
-<!--                    <li class="sign_out">-->
-<!--                        <a href="{% url 'aml:home' %}"-->
-<!--                           style="font-size: 20px; text-align: center; background-color: #121212;">Sign-->
-<!--                            Out</a>-->
-<!--                    </li>-->
-                </ul>
+                                    <div class="two">Warning</div>
 
-            </div>
-        </nav>
-        <div id="page-wrapper">
-            <div class="header">
-                <h1 class="page-header">
-                    Crawling DATA
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="{% url 'aml:home' %}">Home</a></li>
-                    <li class="result_001">Crawling DATA</li>
-                </ol>
-                <div class="contentsDiv">
-                    <div class="contents">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-6">
-                                <div class="pricingTable facebook">
-                                    <div class="pricingTable-header facebook-header">
-                                        <div class="price-value">
-                                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    {% if facebook != None %}
-                                        <div class="f_sns_table">
-                                            <table class="table" style="width:100%">
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <td>{{ facebook.username }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Date of birth</th>
-                                                    <td>{{ facebook.birthday }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Mobile</th>
-                                                    <td>{{ facebook.phone_number }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Residence</th>
-                                                    <td>{{ facebook.address1 }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Friends</th>
-                                                    <td>{{ facebook.friends_cnt }}</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    {% else %}
-                                        <div class="f_sns_table">
-                                            <div class="f_form_ajax">
-                                                <form class="form-group" action="" method="post">{% csrf_token %}
-                                                    <input type="text" name="f_username" class="f_username form-control"
-                                                           autocomplete="no" placeholder="Facebook ID">
-                                                    <input type="password" name="f_password"
-                                                           class="f_password form-control"
-                                                           autocomplete="no" placeholder="Facebook PW">
-                                                </form>
-                                                <button class="read facebook_btn">sign in again<i
-                                                        class="fa fa-angle-right"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    {% endif %}
+                                    <div class="three">Caution</div>
+
+                                    <div class="four">Stability</div>
                                 </div>
                             </div>
-                            <div class="col-md-2 col-sm-6">
-                                <div class="pricingTable twitter">
-                                    <div class="pricingTable-header twitter-header">
-                                        <div class="price-value">
-                                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    {% if twitter != None %}
-                                        <div class="t_sns_table">
-                                            <table class="table" style="width:100%">
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <td>{{ twitter.username }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Tweet</th>
-                                                    <td>{{ twitter.tweet_cnt }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Follower</th>
-                                                    <td>{{ twitter.follower_cnt }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Following</th>
-                                                    <td>{{ twitter.following_cnt }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Joined date</th>
-                                                    <td>{{ twitter.joined_date }}</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    {% else %}
-                                        <div class="t_sns_table">
-                                            <div class="t_form_ajax">
-                                                <form class="form-group" action="" method="post">{% csrf_token %}
-                                                    <input type="text" name="t_username"
-                                                           class="t_username form-control"
-                                                           autocomplete="no" placeholder="Twitter ID">
-                                                    <input type="password" name="t_password"
-                                                           class="t_password form-control"
-                                                           autocomplete="no" placeholder="Twitter PW">
-                                                    <input type="text" name="t_email"
-                                                           class="t_email form-control"
-                                                           autocomplete="no" placeholder="Twitter E-mail">
-                                                    <input type="text" name="t_ph"
-                                                           class="t_ph form-control"
-                                                           autocomplete="no" placeholder="Twitter Phone Number">
-                                                </form>
-                                                <button class="read twitter_btn">sign in again<i
-                                                        class="fa fa-angle-right"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    {% endif %}
-                                </div>
+                            <div class="table_div1">
+                                <table class="table">
+                                    <tr>
+                                        <th colspan="4" class="table_name">Personal Information</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Name</th>
+                                        <td>{{ client.first_name }} {{ client.last_name }}</td>
+                                        <th>Work</th>
+                                        <td>{{ client.company }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Phone number</th>
+                                        <td>{{ client.phone_number }}</td>
+                                        <th>Nationality</th>
+                                        <td>{{ client.country_of_citizenship }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Date of birth</th>
+                                        <td>{{ client.date_of_birth }}</td>
+                                        <th>Current city</th>
+                                        <td>{{ client.address_city }}</td>
+                                    </tr>
+                                </table>
+                                <table class="table">
+                                    <tr>
+                                        <th colspan="2" class="table_name">AML Hazard plot</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Rating</th>
+                                        <td class="rate">{{ result.rating }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Reason</th>
+                                        <td>{{ result.reason }}</td>
+                                    </tr>
+                                </table>
+                                <table class="table">
+                                    <tr>
+                                        <th colspan="2" class="table_name">SNS data propensity</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Propensity</th>
+                                        <td>
+                                            Of the total {{ result.sns_word_cnt }} words extracted
+                                            from {{ client.last_name }}'s
+                                            SNS
+                                            post,
+                                            {{ result.positive_word_cnt }} positive word
+                                            and {{ result.negative_word_cnt }} negative words
+                                            were found. {{ client.last_name }}'s propensity analysis assessment was
+                                            evaluated with a
+                                            positive factor of {{ result.positive }}% and a negative factor of
+                                            {{ result.negative }}%. {{ client.last_name }} is generally rated as having
+                                            a {{ result.propensity }} personality.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Positive</th>
+                                        <td>{{ result.positive }}%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Negative</th>
+                                        <td>{{ result.negative }}%</td>
+                                    </tr>
+                                </table>
+                                <table class="table">
+                                    <tr>
+                                        <th colspan="2" class="table_name">TCM score</th>
+                                    </tr>
+                                    <tr>
+                                        <th>T</th>
+                                        <td>{{ result.t_score }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>C</th>
+                                        <td>{{ result.c_score }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>M</th>
+                                        <td>{{ result.m_score }}</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <div class="col-md-2 col-sm-6">
-                                <div class="pricingTable instagram">
-                                    <div class="pricingTable-header instagram-header">
-                                        <div class="price-value">
-                                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    {% if instagram != None %}
-                                        <div class="i_sns_table">
-                                            <table class="table" style="width:100%">
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <td>{{ instagram.username }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Post</th>
-                                                    <td>{{ instagram.post_cnt }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Follower</th>
-                                                    <td>{{ instagram.follower_cnt }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Following</th>
-                                                    <td>{{ instagram.following_cnt }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Like</th>
-                                                    <td>{{ instagram.like_cnt }}</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    {% else %}
-                                        <div class="i_sns_table">
-                                            <div class="i_form_ajax">
-                                                <form class="form-group" action="" method="post">{% csrf_token %}
-                                                    <input type="text" name="i_username"
-                                                           class="i_username form-control"
-                                                           autocomplete="no" placeholder="Instagram ID">
-                                                    <input type="password" name="i_password"
-                                                           class="i_password form-control"
-                                                           autocomplete="no" placeholder="Instagram PW">
-                                                </form>
-                                                <button class="read instagram_btn">sign in again<i
-                                                        class="fa fa-angle-right"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    {% endif %}
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-6">
-                                <div class="pricingTable gmail">
-                                    <div class="pricingTable-header gmail-header">
-                                        <div class="price-value">
-                                            <i class="fa fa-google" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    {% if g_id != None %}
-                                        <div class="g_sns_table">
-                                            <table class="table" style="width:100%">
-                                                <tr>
-                                                    <th>E-mail</th>
-                                                    <td>{{ g_id }}</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    {% else %}
-                                        <div class="g_sns_table">
-                                            <div class="g_form_ajax">
-                                                <form class="form-group" action="" method="post">{% csrf_token %}
-                                                    <input type="text" name="g_username"
-                                                           class="g_username form-control"
-                                                           autocomplete="no" placeholder="Google ID">
-                                                    <input type="password" name="g_password"
-                                                           class="g_password form-control"
-                                                           autocomplete="no" placeholder="Google PW">
-                                                </form>
-                                                <button class="read gmail_btn">sign in again<i
-                                                        class="fa fa-angle-right"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    {% endif %}
-                                </div>
-                            </div>
+                        </div>
+                        <div class="news">
+                            <table class="table">
+                                <tr>
+                                    <th colspan="2" class="table_name">Google new Search Result</th>
+                                </tr>
+                                <tr>
+                                    <td>There is no financial issues on this object.</td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
-                <div class="bottom_button_wrapper">
-{#                    <form action="{% url "aml:risk" f_id %}" method="post">{% csrf_token %}#}
-{#                        <input type="hidden" name="f_username" value="{{ f_id }}">#}
-{#                        <button type="submit">NEXT</button>#}
-{#                    </form>#}
-                    {% if f_id %}
-                        <button type="button" onclick="location.href='{% url "aml:risk" f_id %}';">NEXT</button>
-                    {% endif %}
-                </div>
             </div>
         </div>
-    </div>
+    {% endwith %}
 {% endblock %}
 {% block script %}
-    <script type="text/javascript" src="{% static 'aml/js/result.js' %}"></script>
+    <script type="text/javascript" src="{% static 'aml/js/risk.js' %}"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $(document).on("click", ".facebook_btn", function () {
-                $('.f_form_ajax').fadeOut();
-                $('.f_error').fadeOut();
-                $.ajax({
-                    url: "{% url 'aml:f_crawling' %}",
-                    type: 'post',
-                    data: {
-                        'f_username': $('.f_username').val(),
-                        'f_password': $('.f_password').val(),
-                        'csrfmiddlewaretoken': '{{ csrf_token }}'
-                    },
-                    success: function (response) {
-                        console.log(response);
-                        if (response.facebook === '성공') {
-                            $('div').remove('.f_form_ajax');
-                            $('div').remove('.f_error');
-                            $('.f_sns_table').append(
-                                '<table class="table" style="width:100%">\n' +
-                                '    <tr>\n' +
-                                '         <th>Name</th>\n' +
-                                '         <td>' + response.username + '</td>\n' +
-                                '    </tr>\n' +
-                                '    <tr>\n' +
-                                '          <th>Date of birth</th>\n' +
-                                '          <td>' + response.birthday + '</td>\n' +
-                                '    </tr>\n' +
-                                '    <tr>\n' +
-                                '          <th>Mobile</th>\n' +
-                                '          <td>' + response.phone_number + '</td>\n' +
-                                '     </tr>\n' +
-                                '     <tr>\n' +
-                                '           <th>Residence</th>\n' +
-                                '           <td>' + response.address1 + '</td>\n' +
-                                '     </tr>\n' +
-                                '     <tr>\n' +
-                                '           <th>Friends</th>\n' +
-                                '           <td>' + response.friends_cnt + '</td>\n' +
-                                '     </tr>\n' +
-                                '</table>'
-                            );
-                        } else {
-                            $('.f_form_ajax').fadeIn();
-                            $('div').remove('.f_error');
-                            $('.facebook').append('<div class="f_error">' + response.error + '</div>');
-                        }
-                    },
-                    error: function (request, status, error) {
-                        $('.f_form_ajax').fadeIn();
-                        $('.error').fadeIn();
-                        alert('facebook fail')
-                    }
-                });
-            });
-            $(document).on("click", ".twitter_btn", function () {
-                $('.t_form_ajax').fadeOut();
-                $('.t_error').fadeOut();
-                $.ajax({
-                    url: "{% url 'aml:t_crawling' %}",
-                    type: 'post',
-                    data: {
-                        't_username': $('.t_username').val(),
-                        't_password': $('.t_password').val(),
-                        't_email': $('.t_email').val(),
-                        't_ph': $('.t_ph').val(),
-                        'csrfmiddlewaretoken': '{{ csrf_token }}'
-                    },
-                    success: function (response) {
-                        console.log(response);
-                        if (response.twitter === '성공') {
-                            $('div').remove('.t_form_ajax');
-                            $('div').remove('.t_error');
-                            $('.t_sns_table').append(
-                                '<table class="table" style="width:100%">\n' +
-                                '    <tr>\n' +
-                                '         <th>Name</th>\n' +
-                                '         <td>' + response.username + '</td>\n' +
-                                '    </tr>\n' +
-                                '    <tr>\n' +
-                                '          <th>Tweet</th>\n' +
-                                '          <td>' + response.tweet_cnt + '</td>\n' +
-                                '    </tr>\n' +
-                                '    <tr>\n' +
-                                '          <th>Follower</th>\n' +
-                                '          <td>' + response.follower_cnt + '</td>\n' +
-                                '     </tr>\n' +
-                                '     <tr>\n' +
-                                '           <th>Following</th>\n' +
-                                '           <td>' + response.following_cnt + '</td>\n' +
-                                '     </tr>\n' +
-                                '     <tr>\n' +
-                                '           <th>Joined date</th>\n' +
-                                '           <td>' + response.joined_date + '</td>\n' +
-                                '     </tr>\n' +
-                                '</table>'
-                            );
-                        } else {
-                            $('.t_form_ajax').fadeIn();
-                            $('div').remove('.t_error');
-                            $('.twitter').append('<div class="t_error">' + response.error + '</div>');
-                        }
-                    },
-                    error: function (request, status, error) {
-                        $('.t_form_ajax').fadeIn();
-                        $('.error').fadeIn();
-                        alert('twitter fail')
-                    }
-                });
-            });
-            $(document).on("click", ".instagram_btn", function () {
-                $('.i_form_ajax').fadeOut();
-                $('.i_error').fadeOut();
-                $.ajax({
-                    url: "{% url 'aml:i_crawling' %}",
-                    type: 'post',
-                    data: {
-                        'i_username': $('.i_username').val(),
-                        'i_password': $('.i_password').val(),
-                        'csrfmiddlewaretoken': '{{ csrf_token }}'
-                    },
-                    success: function (response) {
-                        console.log(response);
-                        if (response.instagram === '성공') {
-                            $('div').remove('.i_form_ajax');
-                            $('div').remove('.i_error');
-                            $('.i_sns_table').append(
-                                '<table class="table" style="width:100%">\n' +
-                                '    <tr>\n' +
-                                '         <th>Name</th>\n' +
-                                '         <td>' + response.username + '</td>\n' +
-                                '    </tr>\n' +
-                                '    <tr>\n' +
-                                '          <th>Post</th>\n' +
-                                '          <td>' + response.post_cnt + '</td>\n' +
-                                '    </tr>\n' +
-                                '    <tr>\n' +
-                                '          <th>Follower</th>\n' +
-                                '          <td>' + response.follower_cnt + '</td>\n' +
-                                '     </tr>\n' +
-                                '     <tr>\n' +
-                                '           <th>Following</th>\n' +
-                                '           <td>' + response.following_cnt + '</td>\n' +
-                                '     </tr>\n' +
-                                '     <tr>\n' +
-                                '           <th>Like</th>\n' +
-                                '           <td>' + response.like_cnt + '</td>\n' +
-                                '     </tr>\n' +
-                                '</table>'
-                            );
-                        } else {
-                            $('.i_form_ajax').fadeIn();
-                            $('div').remove('.i_error');
-                            $('.instagram').append('<div class="i_error">' + response.error + '</div>');
-                        }
-                    },
-                    error: function (request, status, error) {
-                        $('.i_form_ajax').fadeIn();
-                        $('.error').fadeIn();
-                        alert('instagram fail')
-                    }
-                });
-            });
-            $(document).on("click", ".youtube_btn", function () {
-                $('.y_form_ajax').fadeOut();
-                $('.y_error').fadeOut();
-                $.ajax({
-                    url: "{% url 'aml:y_crawling' %}",
-                    type: 'post',
-                    data: {
-                        'g_username': $('.y_username').val(),
-                        'g_password': $('.y_password').val(),
-                        'csrfmiddlewaretoken': '{{ csrf_token }}'
-                    },
-                    success: function (response) {
-                        console.log(response);
-                        if (response.youtube === '성공') {
-                            $('div').remove('.y_form_ajax');
-                            $('div').remove('.y_error');
-                            $('.y_sns_table').append(
-                                '<table class="table" style="width:100%">\n' +
-                                '    <tr>\n' +
-                                '         <th>Name</th>\n' +
-                                '         <td>' + response.username + '</td>\n' +
-                                '    </tr>\n' +
-                                '    <tr>\n' +
-                                '          <th>Subscribe</th>\n' +
-                                '          <td>' + response.subscribe_cnt + '</td>\n' +
-                                '    </tr>\n' +
-                                '    <tr>\n' +
-                                '          <th>Recent video</th>\n' +
-                                '          <td>' + response.recent_video_cnt + '</td>\n' +
-                                '     </tr>\n' +
-                                '     <tr>\n' +
-                                '           <th>Comment history</th>\n' +
-                                '           <td>' + response.comment_history_cnt + '</td>\n' +
-                                '     </tr>\n' +
-                                '</table>'
-                            );
-                        } else {
-                            $('.y_form_ajax').fadeIn();
-                            $('div').remove('.y_error');
-                            $('.youtube').append('<div class="y_error">' + response.error + '</div>');
-                        }
-                    },
-                    error: function (request, status, error) {
-                        $('.y_form_ajax').fadeIn();
-                        $('.y_error').fadeIn();
-                        alert('youtube fail')
-                    }
-                });
-            });
-            $(document).on("click", ".gmail_btn", function () {
-                $('.g_form_ajax').fadeOut();
-                $('.g_error').fadeOut();
-                $.ajax({
-                    url: "{% url 'aml:g_crawling' %}",
-                    type: 'post',
-                    data: {
-                        'g_username': $('.g_username').val(),
-                        'g_password': $('.g_password').val(),
-                        'csrfmiddlewaretoken': '{{ csrf_token }}'
-                    },
-                    success: function (response) {
-                        console.log(response);
-                        if (response.gmail === '성공') {
-                            $('div').remove('.g_form_ajax');
-                            $('div').remove('.g_error');
-                            $('.g_sns_table').append(
-                                '<table class="table" style="width:100%">\n' +
-                                '    <tr>\n' +
-                                '         <th>Name</th>\n' +
-                                '         <td>' + response.username + '</td>\n' +
-                                '    </tr>\n' +
-                                '    <tr>\n' +
-                                '          <th>E-mail</th>\n' +
-                                '          <td>' + response.email + '</td>\n' +
-                                '    </tr>\n' +
-                                '    <tr>\n' +
-                                '          <th>Mail</th>\n' +
-                                '          <td>' + response.mail_cnt + '</td>\n' +
-                                '     </tr>\n' +
-                                '</table>'
-                            );
-                        } else {
-                            $('.g_form_ajax').fadeIn();
-                            $('div').remove('.g_error');
-                            $('.gmail').append('<div class="g_error">' + response.error + '</div>');
-                        }
-                    },
-                    error: function (request, status, error) {
-                        $('.g_form_ajax').fadeIn();
-                        $('.g_error').fadeIn();
-                        alert('gmail fail')
-                    }
-                });
-            });
+            var rating = $('.rate').text();
+            if (rating === 'Stability') {
+                $('.four').css('font-size', 'xx-large');
+                $('.table_name').css('background', 'rgb(77, 208, 225)');
+                $('th:not(.table_name)').css('color', 'rgb(77, 208, 225)')
+            } else if (rating === 'Caution') {
+                $('.three').css('font-size', 'xx-large');
+                $('.table_name').css('background', 'rgb(100, 181, 246)');
+                $('th:not(.table_name)').css('color', 'rgb(100, 181, 246)')
+            } else if (rating === 'Warning') {
+                $('.two').css('font-size', 'xx-large');
+                $('.table_name').css('background', 'rgb(149, 117, 205)');
+                $('th:not(.table_name)').css('color', 'rgb(149, 117, 205)')
+            } else if (rating === 'Danger') {
+                $('.one').css({'font-size': 'x-large', 'line-height': '7'});
+                $('.table_name').css('background', 'rgb(240, 98, 146)');
+                $('th:not(.table_name)').css('color', 'rgb(240, 98, 146)')
+            }
         });
     </script>
 {% endblock %}
+
+

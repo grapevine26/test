@@ -1,0 +1,229 @@
+#circle_div {
+    display: none;
+    position: relative;
+    width: 1824px;
+    height: 600px;
+    padding: 50px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.circle_contents {
+    width: 19.5%;
+    position: absolute;
+    height: 500px;
+    padding: 12px 10px;
+    float: left;
+    border-radius: 12px;
+    background-color: #FFF;
+    border: 1px solid #EFF2F7;
+
+}
+
+.wrapper {
+    width: 170px; /* Set the size of the progress bar */
+    height: 170px;
+    position: absolute; /* Enable clipping */
+    clip: rect(0px, 150px, 150px, 75px); /* Hide half of the progress bar */
+}
+
+.circle_contents:nth-child(2) {
+    left: 20%;
+}
+
+.circle_contents:nth-child(3) {
+    left: 40%;
+}
+
+.circle_contents:nth-child(4) {
+    left: 60%;
+}
+
+.circle_contents:nth-child(5) {
+    left: 80%;
+}
+
+/* Set the sizes of the elements that make up the progress bar */
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    position: absolute;
+    clip: rect(0px, 75px, 150px, 0px);
+    z-index: 50;
+}
+
+.outer_circle {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border: 1px solid rgba(30, 30, 30, 0.1);
+    border-radius: 100%;
+    background-color: #FAFBFE;
+}
+
+.bg_circle {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.bg_circle:first-child {
+    left: 0%;
+}
+
+.bg_circle:nth-child(4) {
+    left: 25%;
+}
+
+.bg_circle:nth-child(6) {
+    left: 50%;
+}
+
+.bg_circle:nth-child(8) {
+    left: 75%;
+}
+
+/* Using the data attributes for the animation selectors. */
+/* Base settings for all animated elements */
+div[data-anim~=base] {
+    -webkit-animation-iteration-count: 1; /* Only run once */
+    -webkit-animation-fill-mode: forwards; /* Hold the last keyframe */
+    -webkit-animation-timing-function: linear; /* Linear animation */
+}
+
+.wrapper[data-anim~=wrapper] {
+    -webkit-animation-duration: 0.01s; /* Complete keyframes asap */
+    -webkit-animation-delay: 3s; /* Wait half of the animation */
+    -webkit-animation-name: close-wrapper; /* Keyframes name */
+}
+
+.circle[data-anim~=left] {
+    -webkit-animation-duration: 6s; /* Full animation time */
+    -webkit-animation-name: left-spin;
+}
+
+.circle[data-anim~=right] {
+    -webkit-animation-duration: 3s; /* Half animation time */
+    -webkit-animation-name: right-spin;
+}
+
+/* Rotate the right side of the progress bar from 0 to 180 degrees */
+@-webkit-keyframes right-spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(180deg);
+    }
+}
+
+/* Rotate the left side of the progress bar from 0 to 360 degrees */
+@-webkit-keyframes left-spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/* Set the wrapper clip to auto, effectively removing the clip */
+@-webkit-keyframes close-wrapper {
+    to {
+        clip: rect(auto, auto, auto, auto);
+    }
+}
+
+/* SNS circle images */
+.circle_contents:first-child > .wrapper > .circle {
+    border: 10px solid rgba(52, 120, 234, 1);
+}
+
+.circle_contents:nth-child(2) > .wrapper > .circle {
+    border: 10px solid rgba(126, 44, 176, 1);
+}
+
+.circle_contents:nth-child(3) > .wrapper > .circle {
+    border: 10px solid rgba(255, 193, 132, 1);
+}
+
+.circle_contents:nth-child(4) > .wrapper > .circle {
+    border: 10px solid black;
+}
+
+.circle_contents:last-child > .wrapper > .circle {
+    border: 10px solid rgba(72, 156, 229, 1);
+}
+
+/* end */
+
+.circle_contents {
+    display: none;
+}
+
+.circle_contents:first-child {
+    display: block;
+}
+
+.circle_contents > .circle_percentage {
+    width: 53%;
+    height: 30%;
+    text-align: center;
+    float: right;
+}
+
+.circle_contents > .circle_percentage > h1 {
+    font-size: 50px;
+}
+
+.circle_contents > .circle_contents_info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 67%;
+}
+
+.circle_contents:first-child > .circle_contents_info {
+    padding: 50px 0;
+}
+
+.circle_contents:nth-child(2) > .circle_contents_info {
+    padding: 95px 0;
+}
+
+.circle_contents:nth-child(3) > .circle_contents_info, .circle_contents:nth-child(4) > .circle_contents_info {
+    padding: 100px 0;
+}
+
+.circle_contents:last-child > .circle_contents_info {
+    padding: 85px 0;
+}
+
+.circle_contents > .circle_contents_info > h2 {
+    display: none;
+}
+
+.circle_contents > .circle_contents_info > p {
+    display: none;
+    margin: unset;
+    padding: unset;
+}
+
+#info_2 {
+    display: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+#info_2 > h2 {
+    font-size: 25px;
+}

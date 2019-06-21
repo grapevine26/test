@@ -14,7 +14,7 @@ from AML.models import TwitterInfo, TwitterTweet, TwitterTrends, TwitterFollower
 import time
 
 
-def start(user_id, user_pw, ph, email):
+def start(pk, url):
     start_time_all = time.time()
 
     options = Options()
@@ -26,16 +26,16 @@ def start(user_id, user_pw, ph, email):
                          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36")
 
     url = 'https://twitter.com/login'
-    path = r"C:\inetpub\wwwroot\django_aml\crawler_AML\chromedriver.exe"
-    # path = r"C:\Users\ten\Desktop\django_AML\crawler_AML\chromedriver.exe"
+    # path = r"C:\inetpub\wwwroot\django_aml\crawler_AML\chromedriver.exe"
+    path = r"C:\Users\ten\Desktop\django_AML\crawler_AML\chromedriver.exe"
 
     driver = webdriver.Chrome(options=options, executable_path=path)
     driver.get(url)
     WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.page-canvas")))
 
-    driver.find_element_by_class_name('js-username-field').send_keys(user_id)
+    driver.find_element_by_class_name('js-username-field').send_keys('yifi1004@gmail.com')
     time.sleep(2)
-    driver.find_element_by_class_name('js-password-field').send_keys(user_pw)
+    driver.find_element_by_class_name('js-password-field').send_keys('4109121z')
     driver.find_element_by_css_selector('div.page-canvas .t1-form').submit()
     try:
         try:

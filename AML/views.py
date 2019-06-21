@@ -41,14 +41,20 @@ class Analysing(DetailView):
     model = Client
     template_name = 'aml/analysing.html'
 
+    # def get_success_url(self, **kwargs):
+    #     obj = Client.objects.order_by('-pk')[0].pk
+    #     return reverse('aml:analysing', args=(obj,))
+
+    def get_context_data(self, **kwargs):
+        context = super(Analysing, self).get_context_data(**kwargs)
+        sns_data(self.kwargs['pk'])
+        return context
+
+
     # def get(self, request, *args, **kwargs):
     #     client = self.get_context_data(object=self.get_object())
     #     print(client)
     #     return render(request, 'aml/analysing.html', client)
-
-    def get_context_data(self, **kwargs):
-        context = super(Analysing, self).get_context_data(**kwargs)
-        return context
 
     # def post(self, request, *args, **kwargs):
     #     # self.object = self.get_object()
@@ -61,116 +67,15 @@ class Analysing(DetailView):
     #     context = super(Analysing, self).get_context_data(**kwargs)
     #     context['client'] = ClientInformation.objects.filter(pk=self.get_object())
     #     return context
-    #
 
 
-def analysing(request):
-    if request.POST:
-        f_username = request.POST.get('f_username')
-        f_password = request.POST.get('f_password')
-        i_username = request.POST.get('i_username')
-        i_password = request.POST.get('i_password')
-        g_username = request.POST.get('g_username')
-        g_password = request.POST.get('g_password')
-        t_username = request.POST.get('t_username')
-        t_password = request.POST.get('t_password')
-        t_ph = request.POST.get('t_ph')
-        t_email = request.POST.get('t_email')
-        ctx = {
-            'f_username': f_username,
-            'f_password': f_password,
-            'i_username': i_username,
-            'i_password': i_password,
-            't_username': t_username,
-            't_password': t_password,
-            'g_username': g_username,
-            'g_password': g_password,
-            't_ph': t_ph,
-            't_email': t_email,
-        }
-        return render(request, 'aml/analysing.html', ctx)
-    ctx = {
+class ResultView(DetailView):
+    model = Client
+    template_name = 'aml/result.html'
 
-    }
-    return render(request, 'aml/analysing.html', ctx)
-
-
-def result(request):
-    if request.POST:
-        f_id = request.POST.get('f_username')
-        i_id = request.POST.get('i_username')
-        t_id = request.POST.get('t_username')
-        g_id = request.POST.get('g_username')
-
-        try:
-            f_info = FacebookInfo.objects.filter(user_id=f_id).last()
-        except Exception as e:
-            f_info = None
-        try:
-            i_info = InstagramInfo.objects.filter(user_id=i_id).last()
-        except Exception as e:
-            i_info = None
-        try:
-            t_info = TwitterInfo.objects.filter(user_id=t_id).last()
-        except Exception as e:
-            t_info = None
-        try:
-            y_info = YoutubeInfo.objects.filter(user_id=g_id).last()
-        except Exception as e:
-            y_info = None
-        try:
-            g_info = GmailInfo.objects.filter(user_id=g_id).last()
-        except Exception as e:
-            g_info = None
-
-        ctx = {
-            'f_id': f_id,
-            'i_id': i_id,
-            't_id': t_id,
-            'g_id': g_id,
-            'facebook': f_info,
-            'instagram': i_info,
-            'twitter': t_info,
-            'youtube': y_info,
-            'gmail': g_info,
-        }
-        return render(request, 'aml/result.html', ctx)
-
-    ctx = {
-
-    }
-    return render(request, 'aml/result.html', ctx)
-
-
-def risk(request, facebook_id):
-    f_info = FacebookInfo.objects.filter(user_id=facebook_id).last()
-    result_ = Result.objects.filter(f_id=facebook_id).last()
-    reason = Reason.objects.get(rating=result_.user_rate)
-    ctx = {
-        'facebook': f_info,
-        'result': result_,
-        'reason': reason
-    }
-    return render(request, 'aml/risk.html', ctx)
-
-
-def analysing_risk(request):
-    if request.POST:
-        f_username = request.POST.get('f_username')
-        t_username = request.POST.get('t_username')
-        i_username = request.POST.get('i_username')
-        g_username = request.POST.get('g_username')
-
-        sns_data(f_username, t_username, i_username, g_username)
-
-        ctx = {
-
-        }
-        return JsonResponse(ctx, content_type="application/json", json_dumps_params={'ensure_ascii': False})
-    ctx = {
-
-    }
-    return JsonResponse(ctx, content_type="application/json", json_dumps_params={'ensure_ascii': False})
+    def get_context_data(self, **kwargs):
+        context = super(ResultView, self).get_context_data(**kwargs)
+        return context
 
 
 def f_crawling(request):
@@ -340,21 +245,6 @@ def g_crawling(request):
                 return JsonResponse(ctx, content_type="application/json", json_dumps_params={'ensure_ascii': False})
         else:
             return None
-    return None
-
-
-def g_auth_crawling(request):
-    if request.is_ajax() and request.POST:
-        g_username = request.POST.get('g_username')
-        g_password = request.POST.get('g_password')
-        if g_username is not None and g_password is not None:
-            data = google(g_username, g_password)
-            print('google :', data[0])
-            ctx = {
-                'auth': '성공',
-                'data': data[0],
-            }
-            return JsonResponse(ctx, content_type="application/json", json_dumps_params={'ensure_ascii': False})
     return None
 
 

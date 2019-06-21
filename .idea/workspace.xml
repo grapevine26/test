@@ -5,22 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac6de35e-832d-4a1b-aad1-d1035744865a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/crawler_AML/crawler/Crawler_linkedin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crawler_AML/analysis/googleSearcher/dbConnection_190612.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crawler_AML/analysis/googleSearcher/googleSearcher_AML_190612.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/css/ana.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/css/check_data.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/css/check_list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/css/circle_fill.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/css/coverflow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/css/terminal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/1.United Nations Named Terrorists.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/10.OFAC Foreign Sanctions Evaders List.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/11.OFAC Sectoral Sanctions Identifications List.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/12.OFAC Palestine Legislative Council List.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/13.OFAC Sanctioned Countries List.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/14.Office if the Comptroller of the Currency Alert.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/15.Offshore Financial Centers.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/16.Canada Entities &amp; OSFI Canada Individuals.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/17.Her Majesty Treasury Consolidated List.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/18.US Bureau of Industry and Security - Denied Entity List &amp; Denied Person List &amp; Unverified Entity List.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/19.Defense Trade Controls Debarred Parties.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/2.European Union Designated Terrorist Groups &amp; Individuals.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/20.Chiefs of State and Foreign Cabinet Members.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/21.FATF Financial Action Task Force, Deficient Jurisdictions - Countries.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/22.Australia Department Of Foreign Affairs and Trade.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/23.Hong Kong Monetary Authority.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/24.Monetary Authority of Singapore.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/25.Primary Money Laundering Concern.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/26.Commodity Futures Trading Commission, Regulatory and Self-Regulatory Authorities.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/27.Foreign Agents Registration Act.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/3.World Bank Ineligible Firms.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/4.Interpol Most Wanted.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/5.Financial Crimes Enforcement Network Special Alert List.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/6.FBI Top Ten Most Wanted.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/7.FBI wanted.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/8.State Department Foreign Terrorist Organizations &amp; State Department Terrorist Exclusions.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/1.United Nations Named Terrorists/9.OFAC Specially Designated Nationals List.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/check_icon_deep_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/hypen_icon_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/logo/fb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/logo/google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/logo/instagram_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/logo/is.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/logo/ks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/logo/linkedin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/logo/nb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/img/logo/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/js/ana.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/js/check_data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/js/check_list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/js/coverflow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/aml/js/terminal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/aml/analysing-js.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AML/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/AML/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AML/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AML/migrations/0002_client_analyst.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/AML/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/AML/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AML/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AML/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AML/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AML/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler_AML/crawler/AML_wordUsageChecker.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler_AML/crawler/Crawler_google_backup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/accounts/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/accounts/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/aml/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/aml/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler_AML/analysis/analysis_result.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler_AML/analysis/analysis_result.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler_AML/crawler/Crawler_facebook.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler_AML/crawler/Crawler_facebook.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler_AML/crawler/Crawler_instagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler_AML/crawler/Crawler_instagram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler_AML/crawler/Crawler_twitter.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler_AML/crawler/Crawler_twitter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/aml/assets/css/custom-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/aml/assets/css/custom-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/aml/css/result.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/aml/css/result.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/aml/analysing.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aml/analysing.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/aml/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aml/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/aml/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aml/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +82,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/django_aml$Crawler_facebook.coverage" NAME="Crawler_facebook Coverage Results" MODIFIED="1561005503084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawler_AML/crawler" />
     <SUITE FILE_PATH="coverage/django_aml$Crawler_linkedin.coverage" NAME="Crawler_linkedin Coverage Results" MODIFIED="1560932077467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawler_AML/crawler" />
+    <SUITE FILE_PATH="coverage/django_aml$Crawler_instagram.coverage" NAME="Crawler_instagram Coverage Results" MODIFIED="1560997458760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawler_AML/crawler" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -42,26 +96,8 @@
           <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/aml/home.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1672">
-                  <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/accounts/forms.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="228">
-                  <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="analysing.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/aml/analysing.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+                <state relative-caret-position="513">
+                  <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
                 </state>
               </provider>
             </entry>
@@ -69,47 +105,38 @@
           <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/AML/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="399">
-                  <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="related_descriptors.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/related_descriptors.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="179">
-                  <caret line="210" selection-start-line="210" selection-end-line="210" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/accounts/login.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="266">
-                  <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/django_AML/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+                <state relative-caret-position="299">
+                  <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
                   <folding>
-                    <element signature="e#634#666#0" expanded="true" />
+                    <element signature="e#0#116#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/urls.py">
+          <file leaf-file-name="check_list.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/static/aml/css/check_list.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="152">
-                  <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+                <state relative-caret-position="494">
+                  <caret line="53" column="88" lean-forward="true" selection-start-line="53" selection-start-column="88" selection-end-line="53" selection-end-column="88" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="result.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/aml/result.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="290">
+                  <caret line="117" column="50" lean-forward="true" selection-start-line="117" selection-start-column="50" selection-end-line="117" selection-end-column="50" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="analysing.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/aml/analysing.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="268">
+                  <caret line="503" column="41" lean-forward="true" selection-start-line="503" selection-start-column="41" selection-end-line="503" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
@@ -117,8 +144,8 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/AML/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="112">
-                  <caret line="17" column="33" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="33" />
+                <state relative-caret-position="1753">
+                  <caret line="308" column="18" selection-start-line="308" selection-start-column="18" selection-end-line="308" selection-end-column="18" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -126,11 +153,35 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Crawler_linkedin.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/crawler_AML/crawler/Crawler_linkedin.py">
+          <file leaf-file-name="analysis_result.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/crawler_AML/analysis/analysis_result.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="415">
-                  <caret line="150" selection-start-line="150" selection-end-line="150" />
+                <state relative-caret-position="366">
+                  <caret line="197" column="41" lean-forward="true" selection-start-line="197" selection-start-column="41" selection-end-line="197" selection-end-column="41" />
+                  <folding>
+                    <element signature="e#0#115#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="googleSearcher_AML_190612.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/crawler_AML/analysis/googleSearcher/googleSearcher_AML_190612.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="485">
+                  <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+                  <folding>
+                    <element signature="e#18#33#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="result.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/aml/css/result.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="323">
+                  <caret line="18" selection-start-line="18" selection-end-line="18" />
                 </state>
               </provider>
             </entry>
@@ -139,20 +190,29 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Crawler_linkedin.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/crawler_AML/crawler/Crawler_linkedin.py">
+          <file leaf-file-name="result.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/aml/css/result.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="38">
-                  <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+                <state relative-caret-position="499">
+                  <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Crawler_twitter.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/crawler_AML/crawler/Crawler_twitter.py">
+          <file leaf-file-name="analysing-js.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/aml/analysing-js.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
-                  <caret line="81" column="98" selection-start-line="81" selection-start-column="98" selection-end-line="81" selection-end-column="116" />
+                <state relative-caret-position="152">
+                  <caret line="323" column="56" lean-forward="true" selection-start-line="323" selection-start-column="56" selection-end-line="323" selection-end-column="56" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ana.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/static/aml/css/ana.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="551">
+                  <caret line="83" column="16" lean-forward="true" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -170,7 +230,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>signin_form_content</find>
       <find>as</find>
       <find>|as_crispy_field</find>
       <find>signin_form_title</find>
@@ -182,9 +241,30 @@
       <find>view site</find>
       <find>no_index = models.AutoField(primary_key=True)</find>
       <find>user_id = models.CharField(max_length=255, null=True, default=None)</find>
+      <find>page_id</find>
+      <find>enum</find>
+      <find>static 'js/</find>
+      <find>static 'img/</find>
+      <find>custom</find>
+      <find>google_title_action</find>
+      <find>info</find>
+      <find>assets</find>
+      <find>facebook_id</find>
+      <find>complete</find>
+      <find>display</find>
+      <find>none</find>
+      <find>circle_contents_info</find>
+      <find>shopping</find>
+      <find>tran</find>
+      <find>50%</find>
+      <find>circle_action</find>
+      <find>result</find>
+      <find>matrix_logo</find>
     </findStrings>
     <replaceStrings>
       <replace>client = models.ForeignKey(Client, on_delete=models.CASCADE)</replace>
+      <replace>static 'aml/js/</replace>
+      <replace>static 'aml/img/</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -193,14 +273,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/account/urls.py" />
-        <option value="$PROJECT_DIR$/templates/aml/base.html" />
-        <option value="$PROJECT_DIR$/templates/500.html" />
-        <option value="$PROJECT_DIR$/templates/404.html" />
-        <option value="$PROJECT_DIR$/templates/aml/test1.html" />
-        <option value="$PROJECT_DIR$/templates/accounts/home.html" />
-        <option value="$PROJECT_DIR$/templates/aml/result.html" />
-        <option value="$PROJECT_DIR$/templates/aml/risk.html" />
         <option value="$PROJECT_DIR$/templates/base/js.html" />
         <option value="$PROJECT_DIR$/templates/base/css.html" />
         <option value="$PROJECT_DIR$/static/accounts/css/home.css" />
@@ -217,7 +289,6 @@
         <option value="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/models.py" />
         <option value="$PROJECT_DIR$/accounts/admin.py" />
         <option value="$PROJECT_DIR$/django_AML/settings.py" />
-        <option value="$PROJECT_DIR$/templates/base/base.html" />
         <option value="$PROJECT_DIR$/static/accounts/css/signup.css" />
         <option value="$PROJECT_DIR$/templates/accounts/signup.html" />
         <option value="$PROJECT_DIR$/templates/messages.html" />
@@ -226,16 +297,33 @@
         <option value="$PROJECT_DIR$/static/accounts/css/login.css" />
         <option value="$PROJECT_DIR$/accounts/forms.py" />
         <option value="$PROJECT_DIR$/static/aml/css/home.css" />
-        <option value="$PROJECT_DIR$/templates/aml/home.html" />
         <option value="$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/base.py" />
         <option value="$PROJECT_DIR$/accounts/models.py" />
-        <option value="$PROJECT_DIR$/AML/urls.py" />
-        <option value="$PROJECT_DIR$/AML/views.py" />
-        <option value="$PROJECT_DIR$/templates/aml/analysing.html" />
         <option value="$PROJECT_DIR$/AML/forms.py" />
         <option value="$PROJECT_DIR$/templates/accounts/login.html" />
-        <option value="$PROJECT_DIR$/AML/models.py" />
         <option value="$PROJECT_DIR$/crawler_AML/crawler/Crawler_linkedin.py" />
+        <option value="$PROJECT_DIR$/crawler_AML/crawler/Crawler_instagram.py" />
+        <option value="$PROJECT_DIR$/crawler_AML/crawler/Crawler_twitter.py" />
+        <option value="$PROJECT_DIR$/crawler_AML/crawler/Crawler_facebook.py" />
+        <option value="$PROJECT_DIR$/templates/base/base.html" />
+        <option value="$PROJECT_DIR$/templates/aml/analysing1.html" />
+        <option value="$PROJECT_DIR$/static/aml/css/circle_fill.css" />
+        <option value="$PROJECT_DIR$/static/aml/js/ana.js" />
+        <option value="$PROJECT_DIR$/templates/aml/risk.html" />
+        <option value="$PROJECT_DIR$/static/aml/assets/css/custom-styles.css" />
+        <option value="$PROJECT_DIR$/AML/urls.py" />
+        <option value="$PROJECT_DIR$/crawler_AML/analysis/googleSearcher/dbConnection_190612.py" />
+        <option value="$PROJECT_DIR$/AML/views.py" />
+        <option value="$PROJECT_DIR$/AML/models.py" />
+        <option value="$PROJECT_DIR$/templates/aml/home.html" />
+        <option value="$PROJECT_DIR$/crawler_AML/analysis/googleSearcher/googleSearcher_AML_190612.py" />
+        <option value="$PROJECT_DIR$/crawler_AML/analysis/analysis_result.py" />
+        <option value="$PROJECT_DIR$/templates/aml/result.html" />
+        <option value="$PROJECT_DIR$/static/aml/css/result.css" />
+        <option value="$PROJECT_DIR$/templates/aml/analysing.html" />
+        <option value="$PROJECT_DIR$/templates/aml/analysing-js.html" />
+        <option value="$PROJECT_DIR$/static/aml/css/check_list.css" />
+        <option value="$PROJECT_DIR$/static/aml/css/ana.css" />
       </list>
     </option>
   </component>
@@ -260,6 +348,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -298,6 +387,19 @@
               <item name="django_aml" type="b2602c69:ProjectViewProjectNode" />
               <item name="django_aml" type="462c0819:PsiDirectoryNode" />
               <item name="crawler_AML" type="462c0819:PsiDirectoryNode" />
+              <item name="analysis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_aml" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_aml" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler_AML" type="462c0819:PsiDirectoryNode" />
+              <item name="analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="googleSearcher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_aml" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_aml" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler_AML" type="462c0819:PsiDirectoryNode" />
               <item name="crawler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -308,13 +410,40 @@
             <path>
               <item name="django_aml" type="b2602c69:ProjectViewProjectNode" />
               <item name="django_aml" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_aml" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_aml" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="aml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_aml" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_aml" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="aml" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_aml" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_aml" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="aml" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_aml" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_aml" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="aml" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="django_aml" type="b2602c69:ProjectViewProjectNode" />
               <item name="django_aml" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="django_aml" type="b2602c69:ProjectViewProjectNode" />
@@ -326,7 +455,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -338,19 +466,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ten\Desktop\django_aml\static\accounts\css" />
-      <recent name="C:\Users\ten\Desktop\django_aml\templates\base" />
-      <recent name="C:\Users\ten\Desktop\django_aml\templates\aml\base" />
-      <recent name="C:\Users\ten\Desktop\django_aml\templates\aml" />
-      <recent name="C:\Users\ten\Desktop\django_aml" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ten\Desktop\django_aml\crawler_AML\crawler" />
-      <recent name="C:\Users\ten\Desktop\django_aml\AML" />
+      <recent name="C:\Users\ten\Desktop\django_aml\crawler_AML\analysis\googleSearcher" />
+      <recent name="C:\Users\ten\Desktop\django_aml\static\aml\css" />
+      <recent name="C:\Users\ten\Desktop\django_aml\templates\aml" />
+      <recent name="C:\Users\ten\Desktop\django_aml\static\aml\assets\css" />
+      <recent name="C:\Users\ten\Desktop\django_aml\static\aml\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ten\Desktop\django_aml\static\aml\assets\css" />
+      <recent name="C:\Users\ten\Desktop\django_aml\static\aml\js" />
+      <recent name="C:\Users\ten\Desktop\django_aml\static\aml\css" />
+      <recent name="C:\Users\ten\Desktop\django_aml\templates\aml" />
       <recent name="C:\Users\ten\Desktop\django_aml\static\accounts\css" />
-      <recent name="C:\Users\ten\Desktop\django_aml\accounts" />
-      <recent name="C:\Users\ten\Desktop\django_aml\templates\accounts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -365,7 +493,45 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Crawler_linkedin">
+  <component name="RunManager" selected="Python.Crawler_facebook">
+    <configuration name="Crawler_facebook" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="django_aml" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawler_AML/crawler" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawler_AML/crawler/Crawler_facebook.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Crawler_instagram" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="django_aml" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawler_AML/crawler" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawler_AML/crawler/Crawler_instagram.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="Crawler_linkedin" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="django_aml" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -411,9 +577,13 @@
     <list>
       <item itemvalue="Django server.django_aml" />
       <item itemvalue="Python.Crawler_linkedin" />
+      <item itemvalue="Python.Crawler_facebook" />
+      <item itemvalue="Python.Crawler_instagram" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Crawler_facebook" />
+        <item itemvalue="Python.Crawler_instagram" />
         <item itemvalue="Python.Crawler_linkedin" />
       </list>
     </recent_temporary>
@@ -457,7 +627,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560762112906</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="클라이언트 정보 입력 화면 만들기">
+      <created>1560932300120</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1560932300120</updated>
+    </task>
+    <task id="LOCAL-00006" summary="클라이언트 정보 입력 화면 만들기">
+      <created>1560932310441</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560932310441</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -465,13 +649,13 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5019685" side_tool="true" weight="0.3916849" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.21483096" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" x="1895" y="67" width="1920" height="1040" id="Run" order="4" visible="true" weight="0.38604143" />
+      <window_info anchor="bottom" x="1895" y="67" width="1920" height="1040" id="Run" order="4" sideWeight="0.49946696" visible="true" weight="0.21483096" />
       <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49901575" weight="0.24918744" />
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.32827735" />
-      <window_info anchor="bottom" x="361" y="139" width="1036" height="1040" id="Terminal" order="5" sideWeight="0.4980315" weight="0.22355507" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.13539445" />
+      <window_info anchor="bottom" x="361" y="139" width="1036" height="1040" id="Terminal" order="5" sideWeight="0.49733475" weight="0.22355507" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.13646056" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="SciView" order="0" />
@@ -506,206 +690,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/accounts/img/signin_id.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/accounts/css/common.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/accounts/css/signin.css" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/password_validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/edit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="155" column="6" selection-start-line="155" selection-start-column="6" selection-end-line="155" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/views/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7258">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/app_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/actions.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/utils/module_loading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sites/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="44" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AML/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/checks/registry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/sites.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/contrib/auth/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="9" column="60" lean-forward="true" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1711">
-          <caret line="308" column="33" selection-start-line="308" selection-start-column="33" selection-end-line="308" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/accounts/css/signup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="49" column="15" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/accounts/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1383">
-          <caret line="93" column="42" lean-forward="true" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#634#666#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/messages/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/forms/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="488" column="41" selection-start-line="488" selection-start-column="36" selection-end-line="488" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/messages.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="156" column="7" selection-start-line="156" selection-start-column="7" selection-end-line="156" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/accounts/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1102">
@@ -734,26 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AML/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="e#634#662#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AML/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -761,31 +725,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/aml/analysing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/accounts/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+        <state relative-caret-position="1140">
+          <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -802,30 +752,6 @@
     <entry file="file://$PROJECT_DIR$/accounts/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler_AML/crawler/Crawler_twitter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="81" column="98" selection-start-line="81" selection-start-column="98" selection-end-line="81" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AML/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/aml/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1672">
-          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1406">
@@ -836,34 +762,356 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_AML/urls.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/related_descriptors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="245" column="13" lean-forward="true" selection-start-line="245" selection-start-column="13" selection-end-line="245" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="407" selection-start-line="407" selection-end-line="407" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_AML/crawler/Crawler_google.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_AML/crawler/Crawler_gmail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_AML/crawler/Crawler_youtube.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="69" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_AML/crawler/Crawler_linkedin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2812">
+          <caret line="149" selection-start-line="149" selection-end-line="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/aml/js/terminal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_AML/crawler/Crawler_instagram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5453">
+          <caret line="288" column="37" lean-forward="true" selection-start-line="288" selection-start-column="37" selection-end-line="288" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_AML/crawler/Crawler_facebook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="170" lean-forward="true" selection-start-line="170" selection-end-line="170" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/aml/analysing1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+          <folding>
+            <element signature="e#1812#1847#0#HTML" expanded="true" />
+            <element signature="e#1855#1877#0#HTML" expanded="true" />
+            <element signature="e#2875#2895#0#HTML" expanded="true" />
+            <element signature="e#2984#3032#0#HTML" expanded="true" />
+            <element signature="e#3134#3325#0#HTML" expanded="true" />
+            <element signature="e#3362#3581#0#HTML" expanded="true" />
+            <element signature="e#3618#3792#0#HTML" expanded="true" />
+            <element signature="e#3848#4013#0#HTML" expanded="true" />
+            <element signature="e#4050#4265#0#HTML" expanded="true" />
+            <element signature="e#4302#4485#0#HTML" expanded="true" />
+            <element signature="e#4522#4676#0#HTML" expanded="true" />
+            <element signature="e#4713#4920#0#HTML" expanded="true" />
+            <element signature="e#4957#5112#0#HTML" expanded="true" />
+            <element signature="e#5149#5297#0#HTML" expanded="true" />
+            <element signature="e#5334#5561#0#HTML" expanded="true" />
+            <element signature="e#5598#5777#0#HTML" expanded="true" />
+            <element signature="e#5814#5988#0#HTML" expanded="true" />
+            <element signature="e#6025#6204#0#HTML" expanded="true" />
+            <element signature="e#6241#6440#0#HTML" expanded="true" />
+            <element signature="e#6477#6660#0#HTML" expanded="true" />
+            <element signature="e#6697#6904#0#HTML" expanded="true" />
+            <element signature="e#6941#7124#0#HTML" expanded="true" />
+            <element signature="e#7161#7341#0#HTML" expanded="true" />
+            <element signature="e#7378#7546#0#HTML" expanded="true" />
+            <element signature="e#7583#7819#0#HTML" expanded="true" />
+            <element signature="e#7856#8055#0#HTML" expanded="true" />
+            <element signature="e#8092#8292#0#HTML" expanded="true" />
+            <element signature="e#8329#8534#0#HTML" expanded="true" />
+            <element signature="e#8571#8778#0#HTML" expanded="true" />
+            <element signature="e#8815#8998#0#HTML" expanded="true" />
+            <element signature="e#9035#9205#0#HTML" expanded="true" />
+            <element signature="e#9242#9433#0#HTML" expanded="true" />
+            <element signature="e#9470#9689#0#HTML" expanded="true" />
+            <element signature="e#9746#9920#0#HTML" expanded="true" />
+            <element signature="e#9957#10122#0#HTML" expanded="true" />
+            <element signature="e#10159#10374#0#HTML" expanded="true" />
+            <element signature="e#10411#10594#0#HTML" expanded="true" />
+            <element signature="e#14881#14943#0#HTML" expanded="true" />
+            <element signature="e#15973#16062#0#HTML" expanded="true" />
+            <element signature="e#16915#17005#0#HTML" expanded="true" />
+            <element signature="e#17802#17870#0#HTML" expanded="true" />
+            <element signature="e#18666#18733#0#HTML" expanded="true" />
+            <element signature="e#19592#19620#0#HTML" expanded="true" />
+            <element signature="e#19789#19941#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/aml/js/check_list.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_AML/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
             <element signature="e#634#666#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/accounts/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="75" column="56" lean-forward="true" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_AML/crawler/Crawler_twitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="974">
+          <caret line="203" column="84" selection-start-line="203" selection-start-column="84" selection-end-line="203" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/aml/js/ana.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base/css.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="61" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base/js.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/aml/risk.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/aml/result22.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/aml/css/circle_fill.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="216" column="19" lean-forward="true" selection-start-line="216" selection-start-column="19" selection-end-line="216" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AML/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+          <folding>
+            <element signature="e#634#662#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_AML/analysis/amlRelatedWords_total.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-169115" />
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_AML/analysis/negativeWords.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-84399">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_AML/analysis/positiveWords.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-105622" />
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_AML/analysis/googleSearcher/dbConnection_190612.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1126">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+          <folding>
+            <element signature="e#18#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AML/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1753">
+          <caret line="308" column="18" selection-start-line="308" selection-start-column="18" selection-end-line="308" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_AML/analysis/googleSearcher/googleSearcher_AML_190612.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/aml/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AML/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="299">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#0#116#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/related_descriptors.py">
+    <entry file="file://$PROJECT_DIR$/crawler_AML/analysis/analysis_result.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="210" selection-start-line="210" selection-end-line="210" />
+        <state relative-caret-position="366">
+          <caret line="197" column="41" lean-forward="true" selection-start-line="197" selection-start-column="41" selection-end-line="197" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#115#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler_AML/crawler/Crawler_linkedin.py">
+    <entry file="file://$PROJECT_DIR$/static/aml/css/result.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+        <state relative-caret-position="499">
+          <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/aml/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="117" column="50" lean-forward="true" selection-start-line="117" selection-start-column="50" selection-end-line="117" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/aml/analysing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="503" column="41" lean-forward="true" selection-start-line="503" selection-start-column="41" selection-end-line="503" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/aml/analysing-js.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="323" column="56" lean-forward="true" selection-start-line="323" selection-start-column="56" selection-end-line="323" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/aml/assets/css/custom-styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="67" column="19" lean-forward="true" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/aml/css/check_list.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="53" column="88" lean-forward="true" selection-start-line="53" selection-start-column="88" selection-end-line="53" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/aml/css/ana.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="83" column="16" lean-forward="true" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
         </state>
       </provider>
     </entry>

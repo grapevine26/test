@@ -1,11 +1,10 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block title %}
-<title>analysing</title>
+    <title>analyzing</title>
 {% endblock %}
-{% block css %}
-<style>
-
+{% block content %}
+    <style>
         * {
             font-family: 'Jeju Myeongjo', serif;
             -webkit-box-sizing: border-box;
@@ -14,7 +13,7 @@
         }
 
         body {
-            background-color: white;
+            background-color: #FAFBFE;
             margin: 0;
             padding: 0;
             line-height: 1.6em;
@@ -30,262 +29,563 @@
         }
 
         h1 {
-            font-size: 6rem;
+            font-size: 3rem;
+            padding: 40px 0px;
         }
 
-        ul, li {
-
+        #main_title {
+            width: 100%;
+            height: auto;
+            text-align: center;
         }
 
-        .processing_logs > li {
-            list-style: none;
-            font-size: large;
-            line-height: 35px;
+        #union_result_div > .union_contents_div.check > .union_check > .union_check_box > .check_img {
+            background-image: url('{% static "aml/img/check_icon_deep_green.png" %}');
         }
 
-        @media (min-width: 300px) {
-            .container {
-                width: 750px;
-            }
-
-            .processing_img_wrapper {
-                padding: 10px;
-            }
+        #union_result_div > .union_contents_div.uncheck > .union_check > .union_check_box > .check_img {
+            background-image: url('{% static "aml/img/hypen_icon_gray.png" %}');
         }
 
-        @media (min-width: 768px) {
-            .container {
-                width: 750px;
-            }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'aml/css/ana.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'aml/css/check_list.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'aml/css/coverflow.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'aml/css/circle_fill.css' %}"/>
+    {% block script %}
+        <script src="{% static 'aml/js/copyJs/js/jquery.js' %}"></script>
+        <script src="{% static 'aml/js/copyJs/js/jquery.easing.1.3.js' %}"></script>
+        <script src="{% static 'aml/js/copyJs/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'aml/js/copyJs/js/animate.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="{% static 'aml/js/coverflow.min.js' %}"></script>
 
-            .processing_img_wrapper {
-                padding: 40px;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .container {
-                width: 970px;
-            }
-
-            .processing_img_wrapper {
-                padding: 120px;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .container {
-                width: 1170px;
-            }
-
-            .processing_img_wrapper {
-                padding: 140px;
-            }
-        }
-
-
-</style>
-{% endblock %}
-
-{% block content %}
-<body>
-<iframe src="{% static 'audio/3slide.mp3' %}" allow="autoplay" style="display:none" id="audio_aster01"></iframe>
-<div id="wrapper" class="home-page">
-    <section id="processing">
-        <div class="processing_img_wrapper">
-            <img src="{% static 'aml/img/evalgear_loading.gif' %}"/>
-            <h1 id="main_title">Analysing</h1>
-                {{ client.pk }}
-            <br/>
-            <br/>
-            <ul class="processing_logs">
-                <li>Analysing information.</li>
-            </ul>
+    {% endblock %}
+    <iframe src="{% static 'audio/3slide.mp3' %}" allow="autoplay" style="display:none" id="audio_aster01"></iframe>
+    <div id="main_title_div"><h1 id="main_title" style="font-size : 50px;    padding : 80px 0px;">Analyzing</h1></div>
+    <div>
+        <div id="coverflow">
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/25.Primary Money Laundering Concern.png' %});       background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/26.Commodity Futures Trading Commission, Regulatory and Self-Regulatory Authorities.png' %});       background-color : rgba(64, 64, 64, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/27.Foreign Agents Registration Act.jpg' %});        background-color : rgba(221, 215, 208, 1);"></div>
+            <div id='first_flow'
+                 style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/1.United Nations Named Terrorists.jpg' %}); background-color : rgba(84, 143, 217, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/2.European Union Designated Terrorist Groups & Individuals.jpg' %});        background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/3.World Bank Ineligible Firms.jpg' %});     background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/4.Interpol Most Wanted.jpg' %});    background-color : rgba(254, 0, 4, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/5.Financial Crimes Enforcement Network Special Alert List.png' %}); background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/6.FBI Top Ten Most Wanted.jpg' %}); background-color : rgba(34, 48, 98, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/7.FBI wanted.jpg' %});      background-color : rgba(172, 29, 59, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/8.State Department Foreign Terrorist Organizations & State Department Terrorist Exclusions.jpg' %});        background-color : rgba(10, 30, 47, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/9.OFAC Specially Designated Nationals List.png' %});        background-color : rgba(0, 74, 152, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/10.OFAC Foreign Sanctions Evaders List.jpg' %});    background-color : rgba(209, 215, 207, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/11.OFAC Sectoral Sanctions Identifications List.jpg' %});   background-color : rgba(2, 56, 107, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/12.OFAC Palestine Legislative Council List.jpg' %});        background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/13.OFAC Sanctioned Countries List.jpg' %}); background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/14.Office if the Comptroller of the Currency Alert.jpg' %});        background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/15.Offshore Financial Centers.jpg' %});     background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/16.Canada Entities & OSFI Canada Individuals.jpg' %});      background-color : rgba(53, 94, 131, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/17.Her Majesty Treasury Consolidated List.jpg' %}); background-color : rgba(0, 0, 0, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/18.US Bureau of Industry and Security - Denied Entity List & Denied Person List & Unverified Entity List.png' %});  background-color : rgba(41, 77, 119, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/19.Defense Trade Controls Debarred Parties.png' %});        background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/20.Chiefs of State and Foreign Cabinet Members.jpg' %});     background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/21.FATF Financial Action Task Force, Deficient Jurisdictions - Countries.jpg' %});  background-color : rgba(60, 158, 181, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/22.Australia Department Of Foreign Affairs and Trade.jpg' %});      background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/23.Hong Kong Monetary Authority.jpg' %});   background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/24.Monetary Authority of Singapore.jpg' %});        background-color : rgba(0, 32, 96, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/25.Primary Money Laundering Concern.png' %});       background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/26.Commodity Futures Trading Commission, Regulatory and Self-Regulatory Authorities.png' %});       background-color : rgba(64, 64, 64, 1);"></div>
+            <div id='last_flow'
+                 style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/27.Foreign Agents Registration Act.jpg' %});        background-color : rgba(221, 215, 208, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/1.United Nations Named Terrorists.jpg' %}); background-color : rgba(84, 143, 217, 1);"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/2.European Union Designated Terrorist Groups & Individuals.jpg' %});        background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
+            <div style="background-image : url({% static 'aml/img/1.United Nations Named Terrorists/3.World Bank Ineligible Firms.jpg' %});     background-color : #FFF;        border : 1px solid #EFF2F7;"></div>
         </div>
-    </section>
-</div>
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-{#<form style="display: none;" action="{% url 'aml:result' %}" method="post" id="form">{% csrf_token %}#}
-{#    <input type="hidden" name="f_id" class="f_id" value="{{ f_id }}">#}
-{#    <input type="hidden" name="i_id" class="i_id" value="{{ i_id }}">#}
-{#    <input type="hidden" name="t_id" class="t_id" value="{{ t_id }}">#}
-{#    <input type="hidden" name="g_id" class="g_id" value="{{ g_id }}">#}
-{#    <input type="hidden" name="l_id" class="l_id" value="{{ l_id }}">#}
-{#    <input type="hidden" name="ph" class="t_ph" value="{{ ph }}">#}
-{#    <input type="hidden" name="email" class="t_email" value="{{ email }}">#}
-{#</form>#}
-{% endblock %}
+    </div>
+    <div id="coverflow_stop_btn_div">
+        <button id="coverflow_skip_btn">SKIP</button>
+        <button id="coverflow_stop_btn">STOP</button>
+    </div>
+    <div id="circle_div">
+        <div class="circle_contents">
+            <div class="wrapper" data-anim="base wrapper">
+                <div class="circle" data-anim="base left"></div>
+                <div class="circle" data-anim="base right"></div>
+            </div>
+            <div class="outer_circle"></div>
+            <div class="bg_circle" style="background-image : url({% static 'aml/img/logo/fb.png' %})"></div>
+            <div class="circle_percentage">
+                <h1></h1>
+            </div>
+            <div class="circle_contents_info">
+                <p>Getting user id</p>
+                <p>Getting user mobile number</p>
+                <p>Getting user name</p>
+                <p>Getting user gender</p>
+                <p>Getting user birthday</p>
+                <p>Getting user company info</p>
+                <p>Getting user address</p>
+                <p>Getting user's friends info</p>
+                <p>Getting user's posts info</p>
+                <h2>Complete</h2>
+            </div>
+        </div>
 
-{% block script %}
-<script src="{% static 'aml/js/copyJs/js/jquery.js' %}"></script>
-<script src="{% static 'aml/js/copyJs/js/jquery.easing.1.3.js' %}"></script>
-<script src="{% static 'aml/js/copyJs/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'aml/js/copyJs/js/animate.js' %}"></script>
-<!-- Vendor Scripts -->
-<script>
+        <div class="circle_contents">
+            <div class="wrapper" data-anim="base wrapper">
+                <div class="circle" data-anim="base left"></div>
+                <div class="circle" data-anim="base right"></div>
+            </div>
+            <div class="outer_circle"></div>
+            <div class="bg_circle"
+                 style="background-image : url({% static 'aml/img/logo/is.png' %});    background-size : 80%;"></div>
+            <div class="circle_percentage">
+                <h1></h1>
+            </div>
+            <div class="circle_contents_info">
+                <p>Getting user id</p>
+                <p>Getting user introduction</p>
+                <p>Getting user's posts info</p>
+                <p>Getting user's follower info</p>
+                <p>Getting user's following info</p>
+                <h2>Complete</h2>
+            </div>
+        </div>
+
+        <div class="circle_contents">
+            <div class="wrapper" data-anim="base wrapper">
+                <div class="circle" data-anim="base left"></div>
+                <div class="circle" data-anim="base right"></div>
+            </div>
+            <div class="outer_circle"></div>
+            <div class="bg_circle"
+                 style="background-image : url({% static 'aml/img/logo/google.png' %}); background-size : 80%;"></div>
+            <div class="circle_percentage">
+                <h1></h1>
+            </div>
+            <div class="circle_contents_info">
+                <p>Getting user id</p>
+                <p>Getting user introduction</p>
+                <p>Getting user's posts info</p>
+                <p>Getting user's following info</p>
+                <h2>Complete</h2>
+            </div>
+        </div>
+
+        <div class="circle_contents">
+            <div class="wrapper" data-anim="base wrapper">
+                <div class="circle" data-anim="base left"></div>
+                <div class="circle" data-anim="base right"></div>
+            </div>
+            <div class="outer_circle"></div>
+            <div class="bg_circle" style="background-image : url({% static 'aml/img/logo/linkedin.png' %})"></div>
+            <div class="circle_percentage">
+                <h1></h1>
+            </div>
+            <div class="circle_contents_info">
+                <p>Getting user id</p>
+                <p>Getting user introduction</p>
+                <p>Getting user's posts info</p>
+                <p>Getting user's follower info</p>
+                <h2>Complete</h2>
+            </div>
+        </div>
+
+        <div class="circle_contents">
+            <div class="wrapper" data-anim="base wrapper">
+                <div class="circle" data-anim="base left"></div>
+                <div class="circle" data-anim="base right"></div>
+            </div>
+            <div class="outer_circle"></div>
+            <div class="bg_circle" style="background-image : url({% static 'aml/img/logo/twitter.png' %})"></div>
+            <div class="circle_percentage">
+                <h1></h1>
+            </div>
+            <div class="circle_contents_info">
+                <p>Getting user id</p>
+                <p>Getting user introduction</p>
+                <p>Getting user's posts info</p>
+                <p>Getting user's follower info</p>
+                <p>Getting user's following info</p>
+                <p>Getting user's following info</p>
+                <h2>Complete</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <br/>
+    <div id="info">
+        <p>Try connection to <span class="organization_name"></span></p>
+        <p>Established to <span class="organization_name"></span></p>
+        <p>Searching data in <span class="organization_name"></span></p>
+        <p>Data analysis</p>
+        <p style="padding : 115px 0px;">Done</p>
+    </div>
+    <div id="info_2">
+        <h2>Done</h2>
+    </div>
+
+    <div id="matrix">
+    </div>
+    <div id="matrix_info">
+        <div id="matrix_logo">
+            <div id="matrix_google_img"
+                 style="background-image : url({% static 'aml/img/logo/google.png' %});background-size : cover; background-repeat : no-repeat; background-position : center;"></div>
+        </div>
+        <div id="matrix_title"><h1 id="google_title"></h1></div>
+        <div id="union_result_div">
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} name info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} living state info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} cell No info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} gender</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} birthday</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} company info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div ">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} education info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} email info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div ">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} facebook id</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div ">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} facebook post info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} facebook friends info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} google ID</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} Youtube activity info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} instagram ID</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} instagram intro info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} instagram post info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} instagram follow info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} instagram following info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div ">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} twitter ID</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div ">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} tweet info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div ">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} twitter follow info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div ">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} twitter following info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div ">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} twitter managing years</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div ">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} tweet trend info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div ">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} 1 depth connections info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div ">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} profile info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div ">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} following Hashing info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="union_contents_div">
+                <div class="union_title">
+                    <p>{{ client.first_name }} {{ client.last_name }} Linkedin activity info</p>
+                </div>
+                <div class="union_check">
+                    <div class="union_check_box">
+                        <div class="check_img"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var current_index = 3; // 현재 선택된 아이템. 0부터 시작
+        var autoplay_timer_ID = 0; // 자동 재생 타이머 아이디
+
+        $(function () {
+
+            $('#coverflow').coverflow({
+                /* 옵션 시작 참고: https://coverflowjs.github.io/coverflow/api/options/ */
+                active: current_index, //시작 시 선택할 아이템 -> 0부터 시작함.
+                duration: 500, //애니메이션 시간 100이면 0.1초동안 애니메이션 수행
+                overlap: 0.1, // 겹치 비율 0 부터 1까지 설정가능하며, 0이면 거의 안 겹침. 0.5인 경우 50%만 겹침. 1이면 완전히 겹쳐져서 다른 게 안 보임.
+
+                /* 이벤트 등록 시작 참고: https://coverflowjs.github.io/coverflow/api/events/ */
+                select: function (event, ui) {
+
+                    current_index = Number(ui.index); // 현재 선택된 아이템의 index를 저장한다.
+                    console.log('현재 선택된 아이템(0부터 시작):' + current_index);
+                    console.log('현재 선택된 아이템의 이미지 src:' + ui.active[0].currentSrc);
+                }
+            });
+
+            $('#coverflow img').click(function () {
+                if (!$(this).hasClass('ui-state-active')) {
+                    return;
+                }
+
+                $('#coverflow').coverflow('next');
+
+
+            });
+
+        });
+
         $(document).ready(function () {
-            var sec = 0;
-            var timerId = setInterval(function () {
-                if (sec > 600) {
-                    clearInterval(timerId);
-                } else {
-                    var main_title_string = String($('#main_title').html());
-                    var count = (main_title_string.match(/\./g) || []).length;
+            $('#next_btn').on('click', function () {
+                $('#coverflow').coverflow('next');
+            });
 
-                    if (count < 4) {
-                        $('#main_title').append('.');
-                    } else {
-                        $('#main_title').html('Analysing');
-                    }
-                    sec++;
-                }
-            }, 200);
+            $('#prev_btn').on('click', function () {
+                $('#coverflow').coverflow('prev');
+            });
 
+            $('#autoplay_btn').on('click', function () {
 
-            first_name = {{ client.first_name }}
-            last_name = {{ client.last_name }}
-            ph = {{ client.phone_number }}
-            ph = {{ client.phone_number }}
-            email = {{ client.email }}
-            f_id = {{ client.sns_facebook }}
-            i_id = {{ client.sns_instagram }}
-            g_id = {{ client.sns_google }}
-            t_id = {{ client.sns_twitter }}
-            l_id = {{ client.sns_linkedin }}
+                automaticallySelector();
+                autoplay_timer_ID = setInterval(function () {
+                    automaticallySelector();
+                }, 2000);
+            });
 
-
-            // 페이스북
-            if (!(f_username === '') && !(f_password === '')) {
-                $.ajax({
-                    url: "{% url 'aml:f_crawling' %}",
-                    type: 'POST',
-                    data: {
-                        'f_username': f_username,
-                        'f_password': f_password,
-                        'csrfmiddlewaretoken': '{{ csrf_token }}'
-                    },
-                    success: function (response) {
-                        console.log(response);
-                        if (response.facebook === '성공') {
-                            $('.processing_logs').append('<li>Facebook analysis completed.</li>');
-                        } else {
-                            $('.processing_logs').append('<li> Facebook : ' + response.error + '</li>');
-                        }
-                    },
-                    error: function (request, status, error) {
-                        $('.processing_logs').append('<li>Facebook error.</li>');
-                    }
-                });
-            } else {
-                $('.processing_logs').append('<li>Do not enter a Facebook account</li>');
-            };
-                // 트위터
-                if (!(t_username === '') && !(t_password === '')) {
-                    $.ajax({
-                        url: "{% url 'aml:t_crawling' %}",
-                        type: 'POST',
-                        data: {
-                            't_username': t_username,
-                            't_password': t_password,
-                            't_ph': t_ph,
-                            't_email': t_email,
-                            'csrfmiddlewaretoken': '{{ csrf_token }}'
-                        },
-                        success: function (response) {
-                            console.log(response);
-                            if (response.twitter === '성공') {
-                                $('.processing_logs').append('<li>Twitter analysis completed.</li>');
-                            } else {
-                                $('.processing_logs').append('<li> Twitter : ' + response.error + '</li>');
-                            }
-                        },
-                        error: function (request, status, error) {
-                            $('.processing_logs').append('<li>Twitter error.</li>');
-                        }
-                    });
-                    console.log('twitter')
-                } else {
-                    $('.processing_logs').append('<li>Do not enter a Twitter account</li>');
-                };
-
-                // 인스타그램
-                if (!(i_username === '') && !(i_password === '')) {
-                    $.ajax({
-                        url: "{% url 'aml:i_crawling' %}",
-                        type: 'POST',
-                        data: {
-                            'i_username': i_username,
-                            'i_password': i_password,
-                            'csrfmiddlewaretoken': '{{ csrf_token }}'
-                        },
-                        success: function (response) {
-                            console.log(response);
-                            if (response.instagram === '성공') {
-                                $('.processing_logs').append('<li>instagram analysis completed.</li>');
-                            } else {
-                                $('.processing_logs').append('<li> Instagram : ' + response.error + '</li>');
-                            }
-                        },
-                        error: function (request, status, error) {
-                            $('.processing_logs').append('<li>Instgram error.</li>');
-                        }
-                    });
-                    console.log('instagram')
-                } else {
-                    $('.processing_logs').append('<li>Do not enter a Instagram account</li>');
-                };
-
-                // 구글
-                if (!(g_username === '') && !(g_password === '')) {
-                    $.ajax({
-                        url: "{% url 'aml:g_auth_crawling' %}",
-                        type: 'POST',
-                        data: {
-                            'g_username': g_username,
-                            'g_password': g_password,
-                            'csrfmiddlewaretoken': '{{ csrf_token }}'
-                        },
-                        success: function (response) {
-                            console.log(response);
-                            setTimeout(function() {
-                               $('.processing_logs').append('<li> Gmail analysis completed.</li>');
-                            }, 30000);
-                            setTimeout(function() {
-                               $('.processing_logs').append('<li> Youtube analysis completed.</li>');
-                            }, 32000);
-                        },
-                        error: function (request, status, error) {
-                            $('.processing_logs').append('<li>Google error. ' + request + '</li>');
-                        }
-                    });
-                } else {
-                    $('.processing_logs').append('<li>Do not enter a Google account</li>');
-                }
-
-
-        }).ajaxStop(function () {
-            $.ajax({
-                url: "{% url 'aml:analysing_risk' %}",
-                type: 'POST',
-                data: {
-                    'f_username': $('.f_username').val(),
-                    'i_username': $('.i_username').val(),
-                    't_username': $('.t_username').val(),
-                    'g_username': $('.g_username').val(),
-                    'csrfmiddlewaretoken': '{{ csrf_token }}'
-                },
-                success: function (response) {
-                    console.log(response);
-                    setTimeout(function () {
-                        $('#form').submit();
-                    }, 3000);
-                },
-                error: function (request, status, error) {
-                    console.log(error)
-                }
+            $('#autoplay_stop_btn').on('click', function () {
+                clearInterval(autoplay_timer_ID);
             });
         });
 
+        function automaticallySelector() {
+            var img_cnt = $('#coverflow').children('img').length; // 아이템 총 개수
 
-</script>
+            if (img_cnt - 1 <= current_index) { // 현재 선택된 아이템의 index 값이 전체 아이템 수랑 같거나 크다면 첫번째 아이템을 선택하도록 한다.
+                current_index = 0;
+                $('#coverflow').coverflow('select', current_index);
+            } else {
+                $('#coverflow').coverflow('next');
+            }
+        }
+    </script>
+    <script src="{% static 'aml/js/check_list.js' %}"></script>
+    {#    <script src="{% static 'aml/js/ana.js' %}"></script>#}
+    {% include 'aml/analysing-js.html' %}
 {% endblock %}

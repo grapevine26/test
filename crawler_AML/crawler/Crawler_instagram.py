@@ -10,72 +10,47 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from AML.models import InstagramInfo, InstagramPost, InstagramFollower, InstagramFollowing
+from AML.models import InstagramInfo, InstagramPost, InstagramFollower, InstagramFollowing, Client
 import time
 
 
-def start(user_id, user_pw):
+def start(pk, urls):
     options = Options()
-    options.add_argument('--headless')
+    # options.add_argument('--headless')
     options.add_argument("--window-size=1920x1080")
-    options.add_argument("--disable-gpu")
+    # options.add_argument("--disable-gpu")
     options.add_argument("--lang=en-US")
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36")
     mobile_emulation = {"deviceName": "iPhone 8 Plus"}
     options.add_experimental_option("mobileEmulation", mobile_emulation)
 
-    path = r"C:\inetpub\wwwroot\django_aml\crawler_AML\chromedriver.exe"
-    # path = r"C:\Users\ten\Desktop\django_AML\crawler_AML\chromedriver.exe"
+    # path = r"C:\inetpub\wwwroot\django_aml\crawler_AML\chromedriver.exe"
+    path = r"C:\Users\ten\Desktop\django_AML\crawler_AML\chromedriver.exe"
 
     driver = webdriver.Chrome(options=options, executable_path=path)
 
+    start_time_all = time.time()
+
     driver.get('https://www.instagram.com/accounts/login/')
     WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.NAME, "password")))
-    driver.find_element_by_name('username').send_keys(user_id)
-    driver.find_element_by_name('password').send_keys(user_pw)
+
+    driver.find_element_by_name('username').send_keys('hj.vw')
+    driver.find_element_by_name('password').send_keys('4109121z#!')
     driver.find_element_by_class_name('HmktE').submit()
+    time.sleep(5)
 
+    driver.get('https://www.instagram.com/' + urls)
     try:
-        WebDriverWait(driver, 4).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div._8qite")))
+        WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.fx7hk")))
+        instagram_crawler_start(driver, pk, urls)
     except Exception as e:
-        try:
-            WebDriverWait(driver, 4).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.HpHcz")))
-        except Exception as e:
-            try:
-                WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "article._8Rm4L ")))
-            except Exception as e:
-                try:
-                    WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".piCib ")))
-                    # 비밀번호 오류
-                    error = driver.find_element_by_css_selector('._08v79').text
-                    driver.close()
-                    return error,
-                except Exception as e:
-                    try:
-                        WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#slfErrorAlert ")))
-                        error = driver.find_element_by_css_selector('#slfErrorAlert').text
-                        # 아이디 오류
-                        driver.close()
-                        return error,
-                    except Exception as e:
-                        WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".O4QwN")))
-                        error = 'Unable to sign in due to security issues'
-                        driver.close()
-                        return error,
-    start_time_all = time.time()
-    driver.get('https://www.instagram.com/')
-    WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.piCib")))
+        print('페이지 없음')
 
-    driver.find_element_by_css_selector('div.mt3GC > button:nth-of-type(2)').click()
-    driver.find_element_by_css_selector('div.BvyAW > div:nth-of-type(5) > a').click()
-    WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.fx7hk")))
-
-    instagram_crawler_start(driver, user_id)
     print('인스타그램 크롤링 총 구동 시간 :', time.time() - start_time_all)
 
 
-def instagram_crawler_start(driver, user_id):
+def instagram_crawler_start(driver, pk, url):
     print('[ 인스타그램 기본정보 크롤링 중 ]')
     soup = BeautifulSoup(driver.page_source, 'html.parser')
     lang = driver.find_element_by_css_selector('html').get_attribute('lang')
@@ -103,7 +78,6 @@ def instagram_crawler_start(driver, user_id):
     follower_cnt = int(soup.select("li:nth-of-type(2) > a > span")[0]['title'].replace(',', ''))
     # 팔로잉 수
     following_cnt = int(soup.select("li:nth-of-type(3) > a > span")[0].text.replace(',', ''))
-    profile_img = soup.select('img.be6sR')[0]['src']
 
     insta_dict = dict()
     if username != '':
@@ -120,8 +94,6 @@ def instagram_crawler_start(driver, user_id):
         insta_dict['follow_cnt'] = following_cnt
     if page_id != '':
         insta_dict['page_id'] = page_id
-
-    print('[ 인스타그램 기본정보 크롤링 끝 ] -> 팔로워')
 
     # 스크롤내리는 횟수
     scroll_count = 3
@@ -172,14 +144,12 @@ def instagram_crawler_start(driver, user_id):
             except Exception as e:
                 follower_name = ''
 
-
         # django db insert
         InstagramFollower(
-            user_id=user_id,
+            client=Client.objects.get(pk=pk),
             follower_id=follower_id,
             follower_name=str(follower_name)
         ).save()
-    print('[ 인스타그램 팔로워 크롤링 끝 ] -> 팔로잉')
 
     # 팔로우 리스트
     driver.get('https://www.instagram.com/' + page_id)
@@ -218,12 +188,10 @@ def instagram_crawler_start(driver, user_id):
 
         # django db insert
         InstagramFollowing(
-            user_id=user_id,
+            client=Client.objects.get(pk=pk),
             following_id=follow_id,
             following_name=follow_name
         ).save()
-
-    print('[ 인스타그램 팔로잉 크롤링 끝 ] -> 게시글')
 
     print('[ 인스타그램 게시글 크롤링 중 ]')
     like_cnt = 0
@@ -277,7 +245,7 @@ def instagram_crawler_start(driver, user_id):
 
             # django db insert
             InstagramPost(
-                user_id=user_id,
+                client=Client.objects.get(pk=pk),
                 post_text=post_text,
                 post_place=post_place,
                 post_like=like,
@@ -289,7 +257,7 @@ def instagram_crawler_start(driver, user_id):
     print('[ 인스타그램 게시글 크롤링 끝 ] -> 크롤링 끝', '*' * 200)
     # 인스타그램 기본정보 insert
     InstagramInfo(
-        user_id=user_id,
+        client=Client.objects.get(pk=pk),
         page_id=page_id,
         username=username,
         intro=intro,
@@ -322,4 +290,4 @@ def auto_scroll2(driver):
 
 
 # start('idkimtheho@gmail.com', '7788@E2e3')
-# start('hj.vw', '4109121z#!')
+# start(1, 'ㅁㄴㅇㄹ kimtheho')

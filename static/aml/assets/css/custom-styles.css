@@ -103,6 +103,7 @@ position: fixed;
 padding: 12px 10px 12px 20px;
 margin-bottom: 20px;
 list-style: none;
+width : 1599px;
 
 border-radius: 0;
 -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);    box-shadow: 0 1px 1px rgba(0,0,0,.05);background: #fff;}
@@ -631,7 +632,7 @@ line-height: 1.428571429;
  
  @media(min-width:768px) {
      #page-wrapper{
-               margin: 0 0 0 260px;
+               margin: 0;
                padding: 0;
                min-height: 100vh;
     }

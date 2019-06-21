@@ -1,0 +1,89 @@
+#union_result_div {
+    display : none;
+    width : 1900px;
+    height : 700px;
+    margin : 0px auto;
+    margin-top : 125px;
+    padding : 15px 12px;
+    background-color : rgba(41, 44, 47, 1);
+    border : 1px solid rgba(41, 44, 47, 1);
+    border-radius : 12px;
+    overflow : scroll;
+}
+
+.union_result_line {
+    width : 100%;
+    height : 22px;
+    margin : 2px 0px;
+}
+
+.union_result_line:first-child {
+    margin-bottom : 0px;
+}
+
+.union_result_line:last-child {
+    margin-top : 0px;
+}
+
+.union_result_line > p {
+    width :100%;
+    color : white;
+    float : left;
+    padding : 0px;
+    margin : 0px;
+    line-height : unset;
+    overflow: hidden;
+    word-break : break-all;
+}
+
+.union_result_line > p > span {
+     word-break : break-all;
+}
+
+.dev_team {
+    color : rgba(243, 25, 150, 0.9);
+}
+
+span.union_path {
+    color : rgba(246, 229, 194, 1);
+}
+
+span.plat_n_fb {
+    color : rgba(52, 120, 234, 1);
+}
+
+span.plat_n_is {
+    color : rgba(126, 44, 176, 1);
+}
+
+span.plat_n_tw {
+    color : rgba(72, 156, 229, 1);
+}
+
+span.plat_n_go {
+    color : rgba(255, 193, 132, 1);
+}
+
+span.plat_n_li {
+    color : rgba(52, 220, 234, 1);
+}
+
+span.field_name, span.field_value {
+    color : white;
+}
+
+/* 모바일 */
+@media all and (min-width : 320px) and (max-width : 413px) {
+}
+
+/* 모바일 */
+@media all and (min-width : 414px) and (max-width : 767px)
+}
+
+/* 패블릿 */
+@media all and (min-width : 768px) and (max-width : 1023px) {
+}
+
+/* PC */
+@media all and (min-width : 1024px) and (max-width : 1600px){
+}
